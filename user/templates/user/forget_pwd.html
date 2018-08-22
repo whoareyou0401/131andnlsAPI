@@ -1,0 +1,128 @@
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="/static/css/recommendorder/recommendorder_set_pwd.css">
+         <style>
+            main{
+                position:relative;
+            }
+            .box-wrap{
+                width:100%;
+                background-color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+
+    <header>
+    <div class="home-info-top">
+    <div class="home-status"></div>
+    <div class="home-info-nav">
+    <img src="/static/images/recommendorder/ic_back.png" class="home-info-nav-a">
+    <p>设置密码</p>
+  </div>
+
+</header>
+<main>
+  <div class="content">
+      <p>
+        <img src="/static/images/recommendorder/pwd.login.png">
+        <span class="box-input">
+          <input type="password" name="userPwd" class="userPwd" placeholder="请输入密码" />
+        </span>
+      </p>
+      <b></b>
+      <p>
+        <img src="/static/images/recommendorder/pwd.login.png">
+        <span class="box-input">
+          <input type="password" name="reuserPwd" class="reuserPwd" placeholder="请再次输入密码"/>
+        </span>
+      </p>
+      <b></b>
+      <div class="submit Reset_Password_v2">
+        <a class="login" style='color:#ffba0c'>
+          <input type="button" value="重置密码" onclick="verify()">
+        </a>
+      </div>
+
+
+
+  </div>
+
+</main>
+<div class="model">
+    <div class="sign_in_ok">
+        <p class="ok"></p>
+        <p class="checkin_or_placeorder"></p>
+        <p class="sure_or_cancel">
+            <span class="sure">确定</span>
+        </p>
+    </div>
+</div>
+<script src="/static/js/common/utils.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    document.body.addEventListener('touchstart', function () {});
+    $('.home-info-nav-a').on('click',function(){
+      window.history.go(-1);
+    });
+    function verify() {
+      var userPwd=$('.userPwd').val();
+      var reuserPwd=$('.reuserPwd').val();
+      if (userPwd == reuserPwd) {
+          setupCSRF();
+          $.ajax({
+              type:"post",
+              url:"/reset-pwd",
+              datatype:"json",
+              data:{
+                'phone_number':getCookie("phone"),
+                'pwd':userPwd
+
+              },
+              success:function(data){
+                //console.log(data.code+data.msg);
+                if(data.code == 0){
+                  $('.ok').text('修改密码成功');
+                  $('.model').show();
+                  $('.sure').off('click').on('click',function() {
+                      $('.model').hide();
+                      window.location.href = '/mlogin';
+                  });
+
+                }else{
+                  $('.ok').text(data.msg);
+                  $('.model').show();
+                  $('.sure').off('click').on('click',function() {
+                      $('.model').hide();
+                  });
+
+                }
+              },
+              error:function(){
+                $('.ok').text('操作失败！请重试');
+                $('.model').show();
+                $('.sure').off('click').on('click',function() {
+                    $('.model').hide();
+                });
+
+              }
+
+            })
+      } else {
+          $('.ok').text('两次输入的密码不一致');
+          $('.model').show();
+          $('.sure').off('click').on('click',function() {
+              $('.model').hide();
+          });
+      }
+
+    }
+</script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_rem.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_register.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_forget_pwd.js"></script>
+ </body>
+</html>

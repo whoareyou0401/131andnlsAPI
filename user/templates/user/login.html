@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>超盟 - 登录</title>
+<link href="/static/css/login.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript">
+    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+    var userAgentInfo = navigator.userAgent;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            var next = '{{next}}'
+            if (next && next != '' && next != 'None') {
+               window.location.href = '/mlogin/?next=' + next
+            } else {
+                window.location.href = '/mlogin'
+            }
+        }
+    }
+</script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="/static/js/common/utils.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/static/css/recommendorder/customer_status.css"> -->
+<style>
+    .container{
+        margin: 20px auto;
+        width:600px;
+    }
+    .sign_in_ok{
+      display: none;
+      width: 412px;
+      height: 193px;
+      background: #fbf5f5;
+      z-index: 9999999999;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0px;
+      margin: auto;
+      border-radius: 8px;
+    }
+    .ok{
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      margin-top: 37px;
+      font-size: 26px;
+      height: 26px;
+      color: #333;
+      text-align: center;
+    }
+    .checkin_or_placeorder{
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 63px;
+      font-size: 26px;
+      color: #1578f0;
+      line-height: 63px;
+      text-align: center;
+    }
+    .sure_or_cancel{
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 66px;
+      border-top: 1px solid #dbdbdb;
+      position: relative;
+      bottom: 0;
+    }
+    .cancel:active{
+      opacity: 0.6;
+    }
+    .sure:active{
+      opacity: 0.6;
+    }
+    .sure{
+      width: 410px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      float: left;
+      font-size: 26px;
+      color: #ff4a0c;
+    }
+</style>
+</head>
+<body>
+    <div class="landed-wrapper">
+        <div class="landed">
+            <div class="landed-logo">
+                <img src="/static/images/logo.jpg" alt="">
+            </div>
+            <div class="landed-list">
+                    <div class="button">
+                        <input type="text" name="username" placeholder="用户名" id="id_username">
+                        <input type="password" name="password" placeholder="密码" id="id_password">
+
+                        <div class="warning" id='id_warn'>
+                        </div>
+                        <input type="submit" id="btnS" name="" value="登陆" class="btn-bg" onclick="login_submit()">
+                    </div>
+                    <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </div>
+    </div>
+    <!-- 模态框 -->
+            <div class="sign_in_ok">
+                <p class="ok"></p>
+                <p class="checkin_or_placeorder"></p>
+                <p class="sure_or_cancel">
+                    <span class="sure">确定</span>
+                </p>
+            </div>
+</body>
+</html>
+<script type="text/javascript">
+    var error_count = 0;
+    function login_submit () {
+        var name = $("#id_username").val();
+        var pwd = $("#id_password").val();
+        var next = '{{next}}';
+      if (next.length == 0) {
+          next = 'None';
+      }
+      setupCSRF();
+      $.ajax({
+            //提交数据的类型 POST GET
+            type:"POST",
+            //提交的网址
+            url:"/api/v1.1/user/login",
+            //提交的数据
+            data:{
+                  // 'csrfmiddlewaretoken': '{{csrf_token}}',
+                  'name':name,
+                  'pwd':pwd,
+                  'next':next},
+            //返回数据的格式
+            dataType:"json",
+            //在请求之前调用的函数
+            //成功返回之后调用的函数
+            success:function(data){
+                if (data.code == '1') {
+                        $("#id_warn").html("<p>用户名或密码错误，请重新输入</p>");
+              } else{
+                window.location.href=data.msg;
+              }
+            }   ,
+            //调用执行后调用的函数
+            complete: function(){
+                //请求出错处理
+            }  ,
+            //调用出错执行的函数
+            error: function(){
+                //请求出错处理
+                $('.ok').text('登录失败');
+                $('.sign_in_ok').show();
+                $('.sure').off('click').on('click',function() {
+                    console.log('sure');
+                    $('.sign_in_ok').hide();
+                });
+            }
+         });
+     }
+    document.onkeydown = function(event_e){
+        if(window.event) {
+        event_e = window.event;
+        }
+
+        var int_keycode = event_e.charCode||event_e.keyCode;
+        if( int_keycode == '13' ) {
+        login_submit();
+        return false;
+        }
+    }
+</script>

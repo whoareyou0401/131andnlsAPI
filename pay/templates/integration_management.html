@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="format-detection" content="telephone=no, email=no"/>
+        <title>超便利-积分管理</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/pay/integration_management.css">
+
+ <link href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="{% static 'css/pay/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay/style_table.css' %}">
+
+        <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+        <script src="//cdn.bootcss.com/semantic-ui/2.2.7/semantic.min.js"></script>
+        <script src="//cdn.bootcss.com/vue/2.2.1/vue.js"></script>
+        <script src="/static/js/common/utils.js"></script>
+        <script src="/static/js/pay/integration_management.js"></script>
+    </head>
+
+    <body>
+        {% include "cvs_nav_sidebar.html" %}
+        {% verbatim %}
+        <div id="app">
+            <div class="ui icon input">
+              <input id="search" placeholder="输入姓名..." v-on:input="inputSearch" type="text" style='width:320px;'>
+              <i class="circular search link icon"></i>
+            </div>
+            <div style="display: inline-block;">
+                <button style="height: 36px;width: 70px;" @click="commit">确定</button>
+            </div>
+            <div class="avg-contain">
+                <div class="avg">每人全部加
+                    <input type="text" id='avg'>积分
+                </div>
+                <div style="display: inline-block;">
+                    <button style="margin-left:10px;height: 36px;width:70px;" @click="commitAvg">OK</button>
+                </div>
+            </div>
+            <div>
+                <ul class="select-ul" >
+                    <li class="select-li" v-for="(user, index) in users" >
+                        <div style="margin-top:auto;margin-bottom:auto;text-align: center;">
+                            <div class="cell">{{user.name}}</div>
+                            <div class="cell" style="width:350px;">
+                                <label>当前积分:</label>
+                                <input :id="index" :value="user.integration" v-on:input="inputIntergration(index)" style="width:200px;"/>
+                                <button style="height:26px;line-height:26px;width:80px;margin-top:auto;margin-bottom:auto" v-on:click="changeStatus(index)">离职了</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>
+{% endverbatim %}

@@ -1,0 +1,16 @@
+.table-module .table-wrap .area-list tbody.limit-height {
+    height: 500px;
+}
+
+.table-module .table-wrap .area-list thead .th-first, .table-module .table-wrap .area-list tbody tr td:nth-child(1) {
+    position: relative;
+    left: 0;
+    padding: 0 0px;
+    max-width: 42px;
+    min-width: 42px;
+    text-align: center;
+}
+
+.ui.button.toggle.active, .ui.buttons .button.toggle.active, .ui.toggle.buttons .active.button {
+    background-color: #db2828 !important;
+}

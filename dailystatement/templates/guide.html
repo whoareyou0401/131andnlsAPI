@@ -1,0 +1,169 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>超盟 - 数据管理</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/style_table.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/data.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 -->
+{% include "nav_sidebar.html" %}
+<!-- 内容 -->
+<div class="content">
+    <div class="module-wrap">
+        <div class="table-module">
+            <div class="title">
+                <div class="ui form">
+                        <div class="inline fields">
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="type" id="" checked=""  tabindex="0" class="hidden">
+                                    <label>全部</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox" >
+                                    <input type="radio" name="type" id="0" tabindex="0" class="hidden">
+                                    <label>长促</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="type" id="3" tabindex="0" class="hidden">
+                                    <label>短促</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="type" id="2" tabindex="0" class="hidden">
+                                    <label>离职</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="store-options">
+                    <div class="ui search">
+                        <div class="ui icon input">
+                            <input id="args" class="prompt" type="text" placeholder="门店名 / 导购名 / 手机号">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                    <div class="operate">
+                        <i id="add" class="add user icon"></i>
+                        <i id="delete" class="trash outline icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="add-guide">
+                <div id="title" class="ui horizontal divider">
+                    导购信息
+                </div>
+                <input id="guide_id" type="hidden">
+                <div class="ui input">
+                    <span>导购姓名：</span><input id="name" type="text" required>
+                </div>
+                <br>
+                <div class="ui input">
+                    <span>联系电话：</span><input id="telephone" type="text" required>
+                </div>
+                <br>
+                <div class="ui input">
+                    <span>工资底薪：</span><input id="basic_salary" type="text" placeholder="可选输入...">
+                </div>
+                <br>
+                <div class="choose_store">
+                    <span>所属门店：</span>
+                    <div class="select-menu">
+                        <div class="ui fluid search selection dropdown" id="selection">
+                            <input id="store_id" type="hidden" name="store_id">
+                            <i class="dropdown icon"></i>
+                            <div id="store_name" class="default text">选择门店</div>
+                            <div class="menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="ui input">
+                    <span>工作类型：</span>
+                    <select class="ui search selection dropdown" id="status">  
+                        <option value="0">长促</option>
+                        <option value="3">短促</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <button id="add-guide" class="circular ui icon button">
+                    提交
+                </button>
+                <button id="cancel" class="circular ui icon button">
+                    取消
+                </button>
+            </div>
+            <div class="table-wrap">
+                <div class="table-border">
+                    <table class="area-list" id="myTable">
+                        <thead class="cursor-defalut">
+                        <tr>
+                            <th class="th-first">
+                                <input class="checkbox_all" type="checkbox">
+                            </th>
+                            <th class="th-second" value="store_name">
+                                门店
+                            </th>
+                            <th value="name">
+                                导购
+                            </th>
+                            <th value="telephone">
+                                电话
+                            </th>
+                            <th value="status">
+                                类型
+                            </th>
+                            <th value="basic_salary">
+                                更新时间
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class="limit-height">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pagination-wrap">
+                <div class="pagination">
+                    <div class="page-num">每页10条</div>
+                    <select name="page" class="select-page">
+
+                    </select>
+                    <p>共<span>10</span>页 共<span>10</span>条</p>
+                    <div class="page-turing prev">
+                        <img src="{% static 'images/dailystatement/left.png' %}" alt="" draggable="false">
+                    </div>
+                    <div class="page-turing next">
+                        <img src="{% static 'images/dailystatement/right.png' %}" alt="" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.js"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/base.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/utils.js' %}"></script>
+<script type="text/javascript" src="{% static 'jss/dailystatement/guide-manage.js' %}"></script>
+</html>

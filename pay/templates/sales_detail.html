@@ -1,0 +1,119 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>超便利 - 销量明细</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay/style_table.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay/sales.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay/sales_detail.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 -->
+{% include "cvs_nav_sidebar.html" %}
+<!-- 内容 -->
+<div class="content">
+
+    <div class="module-wrap">
+        <div class="table-module">
+            <div class="title">
+                <div class="store-options">
+                    <div class="ui search date basic buttons">
+                        <button class="ui button active" id="lastweek">今日</button>
+                        <button class="ui button" id="lastmonth">上月</button>
+                        <button class="ui button" id="date-select">自定义</button>
+                    </div>
+                    <div class="ui search input">
+                        <div class="ui icon input">
+                            <input id="args" class="prompt" type="text" placeholder="条码或者品名">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                    <div class="ui small basic icon buttons">
+                        <!-- <button id="abnormal" class="ui toggle basic button">下载当前数据</button> -->
+                        <button class="ui button" id="download"><i class="download icon"></i></button>
+                    </div>
+                </div>
+                <div class="triangle" name="total_sale">
+                    <div class="triangle-down"></div>
+                </div>
+            </div>
+            <div class="date-select">
+                <select class="ui search selection year-selection dropdown" id="start-year"> 
+ </select> <span> 年 </span> 
+                <select class="ui search selection month-selection dropdown" id="start-month"> 
+ </select> <span> 月 </span> 
+                <select class="ui search selection day-selection dropdown" id="start-day"> 
+ </select> <span> 日 </span> 
+                <span> ~ </span> 
+                <select class="ui search selection year-selection dropdown" id="end-year"> 
+ </select> <span> 年 </span> 
+                <select class="ui search selection month-selection dropdown" id="end-month"> 
+ </select> <span> 月 </span>
+                <select class="ui search selection day-selection dropdown" id="end-day"> 
+ </select> <span> 日 </span> 
+                <button class="circular ui icon button" id="usertime">
+                    <i class="icon search"></i>
+                </button>
+                <hr>
+            </div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="table-wrap">
+                <div class="table-border">
+                    <table class="area-list" id="myTable">
+                        <thead class="cursor-defalut">
+                        <tr>
+                            <th value="sales">
+                                <span>条码</span>
+                            </th>
+                            <th class="th-second" value="goods">
+                                <span>商品名称</span>
+                            </th>
+                            <th value="store">
+                                <span>价格</span>
+                            </th>
+                            <th value="time">
+                                <span>销售数量</span>
+                            </th>
+
+                        </tr>
+                        </thead>
+                        <tbody class="limit-height">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pagination-wrap">
+                <div class="pagination">
+                    <div class="page-num">每页10条</div>
+                    <select name="page" class="select-page">
+
+                    </select>
+                    <p>共<span>10</span>页 共<span>10</span>条</p>
+                    <div class="page-turing prev">
+                        <img src="{% static 'images/dailystatement/left.png' %}" alt="" draggable="false">
+                    </div>
+                    <div class="page-turing next">
+                        <img src="{% static 'images/dailystatement/right.png' %}" alt="" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.js"></script>
+<script type="text/javascript" src="{% static 'js/pay/base.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/utils.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/tablesort.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/pay/sales-detail.js' %}"></script>

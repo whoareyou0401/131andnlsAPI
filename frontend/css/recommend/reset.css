@@ -1,0 +1,34 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+input, select, button {
+    outline: none;
+}
+body{
+    font-family: "PingFang SC";
+    background: #f2f2f2;
+}
+a,img { 
+    -webkit-touch-callout: none; 
+}
+html,body {
+    -webkit-user-select:none; 
+    user-select: none;
+    -webkit-text-size-adjust: none; /*部分IOS手机safari浏览器点击后退字体变大*/
+}
+a,button,input,textarea { 
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+input,select { 
+    -webkit-appearance:none; 
+    appearance: none; 
+}

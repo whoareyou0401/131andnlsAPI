@@ -1,0 +1,412 @@
+
+html,
+body,
+ul, li,
+div, img,
+table, tbody,
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  font-family: 'PingFangSC Regular';
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+i{
+  font-style: normal;
+}
+ .home-info-top{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  background-color: #ff4a0c;
+  z-index: 1;
+}
+.home-info-nav{
+  width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .28rem;
+  
+}
+.home-info-nav .home-info-nav-a{
+  width: .15rem;
+  height: .27rem;
+  position: absolute;
+  margin-top: -.135rem;
+  left: .21rem;
+  top: 50%;
+}
+.home-info-nav>p{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  
+}
+.home-info-nav .home-info-nav-b{
+  width: .26rem;
+  height: .26rem;
+  display: inline-block;
+  position: absolute;
+  right: .21rem;
+  margin-top: -.13rem;
+    top: 50%;
+}
+
+ 
+/*搜索栏*/
+.content{
+  
+}
+
+nav {
+  width: 100%;
+  
+  height: 0.68rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0.88rem;
+  z-index: 1;
+  border-bottom: 1px solid #dbdbdb;
+}
+nav .search-box {
+  position: relative;
+  display: block;
+  border: none;
+  outline: none; 
+  display: flex;
+  border-radius: 0.08rem;
+  width: 6.01rem;/*与原图的尺寸不一样原图应该是30.05rem但是效果不好  有待更改问设计师商量*/
+  height: 0.42rem;
+  margin-top: 0.13rem;
+  background-color: #f2f2f2;
+  margin-left: 0.21rem;
+}
+nav .search-box label{
+  display: flex;
+  position: absolute;
+  border: none;
+  width: 0.64rem;
+  height: 100%;
+  background: url('../../images/recommendorder/ic_search.png') no-repeat center;
+}
+nav .search-box .search{
+  flex-grow: 1;
+  border: 0px;
+  background-color: #f2f2f2;
+  font-size: 0.18rem;
+  color: #999;
+  padding-left:0.64rem;
+}
+
+main {
+  position: absolute;
+  top: 1.56rem;
+  width: 100%;
+  height: 78.03%;
+  border-top:  1px solid #dbdbdb;
+  background: #fff;
+}
+
+main aside{
+position: relative;
+ float: right;
+ width: 100%;
+  height: 100%;
+
+ 
+}
+
+main aside section{
+  width:100%;
+  position:absolute;
+  top:0rem;
+  min-height: 8.74rem;
+
+  overflow: auto;
+}
+
+main aside section .box{
+  width: 1.55rem;
+  display: block;
+  float: left;
+}
+main aside section .list{
+  padding-left:0.13rem;
+  padding-right:0.21rem;
+ 
+}
+main aside section .list li{
+  /*height:1.05rem;*/
+  width:100%;  
+  padding-top:0.09rem;
+  border-bottom: 1px solid #dbdbdb;
+  /*position: relative;*/
+  overflow: hidden;
+}
+main aside section .list li img{
+  float:left;
+  margin-right:0.24rem; /* 自定义 */
+  width: 1.10rem;
+  height: 1.03rem;
+}
+main aside section .list li .list-con{
+  position: relative;
+  font-size:0.24rem; 
+  margin-right: 0;
+  overflow: hidden;
+}
+main aside section .list li .list-con h3{
+   
+  color:#333;
+  font-size: 0.24rem;
+  font-family: 'PingFangSC Regular';
+   font-weight: 100;
+}
+main aside section .list li .list-con p{
+  color:#ccc;  /* 自定义字体颜色 */
+  margin: 0.1rem 0;
+  font-size: 0.18rem;
+}
+main aside section .list li .list-con span{
+  color:#ff4a0c;
+  font-weight: 600;
+  font-size: 0.24rem;
+  margin-bottom: 0.05rem;
+
+}
+main aside section .box{
+  width: 4.6rem;
+  float: left;
+  position: relative;
+  margin-bottom: 0.05rem;
+}
+main aside section .box .box-bottom{
+  height: .36rem;
+  width: 3.1rem;
+  line-height: .36rem
+}
+
+main .box-bottom span:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 0.36rem;
+}
+main aside section .list li .list-con .button{
+  float:left;
+  width:0.36rem;
+  height:0.36rem;
+  border-radius: 0.08rem;
+
+}
+
+main aside section .list li .list-con .button.reduce{
+  width:0.36rem;
+  height: 0.36rem;
+  border:0;
+  outline:0;
+  background:#f2f2f2 url('../../images/recommendorder/ic_-minus.png') no-repeat center;
+ 
+}
+main aside section .list li .list-con .button.plus{
+  width: 0.36rem;
+  height: 0.36rem;
+  border:0;
+  outline:0;
+  background:#f2f2f2 url('../../images/recommendorder/ic_-plus.png') no-repeat center;
+ 
+}
+main aside section .list li .list-con input{
+  float:left;
+  width:0.57rem;
+  height:0.3rem;
+  outline:0;
+  border:0;
+  margin:0 0.05rem;
+  text-align: center;
+  font-size:0.24rem;
+  border-radius: 0.08rem;
+  background: #f2f2f2;
+
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  height: 0.92rem;
+  background: #fff;
+  width: 100%;
+  border-top: 1px solid #dbdbdb;
+}
+footer .bottom{
+  display: block;
+  /* float: right; */
+  height: .92rem;
+  line-height: .92rem;
+  /* margin-right: .29rem; */
+  position: absolute;
+  right: 1.89rem;
+}
+
+footer .bottom span {
+  font-size:.26rem;
+  color:#ff4a0c;
+  font-weight:800;
+}
+footer .bottom span i {
+    font-size: .24rem;
+    font-weight: 600;
+}
+.bottom span i{
+  font-style: normal;
+  font-size:.26rem;
+  color:#ff4a0c
+  font-weight:800;
+}
+footer span.money {
+    position:absolute;
+    width:1.6rem;
+    height:.92rem;
+    background:#ff4a03;
+    right:0;
+    font-size:.26rem;
+    color:#fff;
+    text-align:center;
+    line-height:0.92rem;
+    display:block;
+    
+
+}
+.model{
+  width: 6.4rem;
+  height: 11.36rem;
+  background:rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90909;
+
+}
+.model .call{
+  width: 4.12rem;
+  height: 1.93rem;
+  background: white;
+  display: none;
+  z-index: 9999999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+  margin: auto;
+  border-radius: 0.08rem;  
+}
+.model .call p{
+  display: inline-block;
+}
+.model .call p:nth-child(1){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  
+  margin-top: .37rem;
+  font-size: 0.26rem;
+  height: .26rem;
+  color: #333;
+  text-align: center;
+}
+
+.model .call p:nth-child(2){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: 0.63rem;
+  font-size: .26rem;
+  color: #1578f0;
+  line-height: .63rem;
+  text-align: center;
+}
+.model .call p:nth-child(2) span{
+  color: #333;
+  margin-left: .05rem;
+  
+}
+.model .call p:nth-child(3){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: .66rem;
+  border-top: .01rem solid #dbdbdb;
+  position: relative;
+
+}
+.model .call p:nth-child(3) .cancel{
+
+  float: left;
+  width: 2.05rem;
+  height: .66rem;
+  
+  border-right: 0.01rem solid #dbdbdb;
+  text-align: center;
+  line-height: .67rem;
+  font-size: .26rem;
+  color: #666;
+}
+.model .call p:nth-child(3) .sure{
+  width: 2.06rem;
+  height: .67rem;
+  text-align: center;
+  line-height: .67rem;
+  float: left;
+  font-size: .26rem;
+  color: #ff4a0c;
+}
+.modelImg{
+  width: 6.4rem;
+  height: 11.36rem;
+  background:rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 909099;
+
+}
+.modelImg .imgBigShow{
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  z-index: 99999900000;
+  display: none;
+  background:red;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

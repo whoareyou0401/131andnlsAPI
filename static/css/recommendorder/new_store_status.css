@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #ffffff;
+}
+.affirm_info_bg{
+    width: 100%;
+    height: auto;
+    background: url('/static/images/recommendorder/assistor1.png') no-repeat center 2.13rem;
+    background-size: 60%;
+}
+.affirm_info_bg>p:nth-child(1){
+    color: #333333;
+    font-size: .28rem;
+    text-align: center;
+    padding-top: 4rem;
+    letter-spacing: .02rem;
+}
+.affirm_info_bg>p:nth-child(2){
+    color: #666666;
+    font-size: .28rem;
+    text-align: center;
+    letter-spacing: .02rem;
+    margin-top: .38rem;
+}
+.affirm_info_bg>p:nth-child(3){
+    color: #297dfa;
+    font-size: .28rem;
+    text-align: center;
+    letter-spacing: .02rem;
+    margin-top: .16rem;
+}

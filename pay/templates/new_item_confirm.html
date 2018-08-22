@@ -1,0 +1,93 @@
+
+
+{% verbatim %}
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="format-detection" content="telephone=no, email=no"/>
+        <title>超便利-新品概览</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/pay/new_item_confirm.css">
+
+        <link href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+        <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+        <script src="//cdn.bootcss.com/semantic-ui/2.2.7/semantic.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//cdn.bootcss.com/vue/2.2.1/vue.js"></script>
+        <script src="/static/js/common/utils.js"></script>
+        <script src="/static/js/pay/new_item_confirm.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="ui icon input">
+              <input id="search" placeholder="Search..." v-on:input="inputSearch" type="text">
+              <i class="circular search link icon" @click="commit"></i>
+            </div>
+
+            <div style="display: inline-block;">
+                <select class="select"  @change="selectVal">
+                  <option value="person">按照人名搜索</option>
+                  <option value ="item">按照品名搜索</option>
+                  <option value ="store">按照店名搜索</option>
+                </select>
+            </div>
+            <ul>
+               <li v-for="(item, index) in datas">
+                    <div style="display:flex;flex-direction:row;">
+                        <div>
+                            <div class="cell user">
+                                提交人:{{item.username}}
+                            </div>
+                            <div class="cell">
+                                商品名:{{item.name}}
+                            </div>
+                            <div class="cell">
+                                品牌:{{item.brand}}
+                            </div>
+                            <div class="cell">
+                                规格:{{item.unit}}
+                            </div>
+                            <div class="cell">
+                                口味:{{item.taste}}
+                            </div>
+                            <div class="cell">
+                                价格:{{item.price}}
+                            </div>
+                            <div class="cell">
+                                状态:{{item.status}}
+                            </div>
+                            <div class="cell">
+                                门店:{{item.storename}}
+                            </div>
+                            <div class="cell">
+                                地址:{{item.storeaddress}}
+                            </div>
+                        </div>
+                        <div style="position: absolute;left:900px;margin-top:60px;">
+                            <select class="select confirm"  @change="confirm(index, $event)" v-model="item.selected">
+                              <option value="none">请选择</option>
+                              <option value="yes">通过</option>
+                              <option value ="no">拒绝</option>
+                            </select>
+                        </div>
+                    </div>
+               </li>
+            </ul>
+
+            <ul class="pagination">
+                <li @click="pageBefore"><a href="#">&laquo;</a></li>
+                <li v-for="(page, index) in pages" @click="pageChange(index)"><a href="#">{{page}}</a></li>
+
+                <li @click="pageAfter"><a href="#">&raquo;</a></li>
+            </ul>
+
+
+        </div>
+
+    </body>
+
+</html>
+{% endverbatim %}

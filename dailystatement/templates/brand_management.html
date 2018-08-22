@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>导购日报</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/dailystatement/dailystatement_admin.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/dailystatement/multi-select.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/dailystatement/dropzone.css">
+    <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/static/js/common/utils.js"></script>
+    <script src="/static/js/dailystatement/multi-select.js"></script>
+    <script src="/static/js/dailystatement/dropzone.min.js"></script>
+  </head>
+  
+  <body>
+  <div class="container">
+    <div class="logodiv">
+      <!-- <img style="display:inline;" class="logo" src="/static/images/logo.png" height="60" width="180"/>--></div>
+    <div class="center">
+      <div class="row">
+        <div class="col-sm-2">
+          <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li class="tabli active" name="statement" role="presentation">
+              <a href="#">导购报表</a></li>
+            <li class="tabli" name="setting" role="presentation">
+              <a href="#">设置模版</a></li>
+            <li class="tabli" name="upload_data" role="presentation">
+              <a href="#">上传数据</a></li>
+            <li class="tabli" name="data_manager" role="presentation">
+              <a href="#">数据管理</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-10">
+          <div class="panel panel-default statement" id="guide-statement">
+                <table style="border:solid 0px #000" cellspacing="0" class="table">
+                    <thead id="statement">
+                        
+                    </thead>
+                </table>
+          </div>
+          <div class="panel panel-default statement" id="setting">
+            <div class="panel-heading">
+              <span class="panel-title">模版字段选择</span>
+              <div class="panel-title btn-group" style="margin-bottom: 5px;">
+                <button type="button" class="btn" id="tabletype" name="item">商品字段</button>
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="tableli" name="item">
+                    <a href="#">商品字段</a></li>
+                  <li class="tableli" name="store">
+                    <a href="#">门店字段</a></li>
+                  <li class="tableli" name="guide">
+                    <a href="#">导购字段</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label" for="tagsinput-1">请从左侧字段中选择</label>
+                  <div class="col-sm-5">
+                    <script type="text/javascript">jQuery(document).ready(function($) {
+                        $("#multi-select").multiSelect();
+                      });</script>
+                    <select class="form-control" multiple="multiple" id="multi-select" name="my-select[]">
+                      <option>条码</option>
+                      <option>商品名称</option>
+                      <option>商品内码</option>
+                      <option>商品系列</option>
+                      <option>系列编码</option>
+                      <option>商品规格</option>
+                      <option>出厂价</option>
+                      <option>供货价</option>
+                      <option>零售价</option></select>
+                  </div>
+                  <div class="col-sm-4">
+                    <input class="btn btn-default" onclick="upload_template()" value="确认选择" />
+                  </div>
+                </div>
+              </form>
+                <div class="col-sm-12">
+                    <div class="alert alert-success alert-dismissible statement" id="item" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <strong>商品表模版创建成功 ! </strong> 
+                      <a href="https://s3.cn-north-1.amazonaws.com.cn/daily-statement/items/{{brand_id}}_shangpin.csv"
+                       class="alert-link"> 点击下载</a>
+                    </div>
+                    <div class="alert alert-success alert-dismissible statement" id="store" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <strong>门店表模版创建成功 ! </strong> 
+                      <a href="https://s3.cn-north-1.amazonaws.com.cn/daily-statement/store/{{brand_id}}_mendian.csv" class="alert-link"> 点击下载</a>
+                    </div>
+                    <div class="alert alert-success alert-dismissible statement" id="guide" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <strong>导购表模版创建成功 ! </strong> 
+                      <a href="https://s3.cn-north-1.amazonaws.com.cn/daily-statement/guides/{{brand_id}}_daogou.csv" class="alert-link"> 点击下载</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="panel panel-default statement" id="upload_data"> 
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Custom Configuration <small>using callback methods</small>
+                    </h3>
+                </div>
+                
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 text-center">
+                        
+                            <div id="advancedDropzone" class="droppable-area">
+                                Drop Files Here
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-9">
+                            
+                            <table class="table table-bordered table-striped" id="example-dropzone-filetable">
+                                <thead>
+                                    <tr>
+                                        <th width="1%" class="text-center">#</th>
+                                        <th width="50%">Name</th>
+                                        <th width="20%">Upload Progress</th>
+                                        <th>Size</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">Files list will appear here</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+          </div>
+          <div class="panel panel-default statement" id="data_manager">
+            <div class="panel-heading">
+              <div class="panel-title btn-group" style="margin-bottom: 5px;">
+                <button type="button" class="btn" id="tabletype" name="item">商品表</button>
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="tableli" name="item">
+                    <a href="#">商品表</a></li>
+                  <li class="tableli" name="store">
+                    <a href="#">门店表</a></li>
+                  <li class="tableli" name="guide">
+                    <a href="#">导购表</a></li>
+                </ul>
+              </div>
+            </div>
+             <!--  <table style="border:solid 0px #000" cellspacing="0" class="table">
+                <thead>
+                    <tr>
+                        <td>操作</td>
+                        <td>企业标准名称</td>
+                        <td>联系电话</td>
+                        <td>联系地址</td>
+                        <td>创建时间</td>
+                        <td>业务状态</td>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td><span class="glyphicon glyphicon-trash" style="cursor:pointer" onclick="" data-toggle="modal" data-target="#del"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>已开通</td>
+                    </tr>
+                
+                </tbody> -->
+                <!-- </table> -->
+          </div>
+          
+        </div>
+      </div>
+    </div>
+</div>
+    <script type="text/javascript">
+      var tabledict = {
+        "item": ["商品条码", "商品名称", "商品内码", "商品规格", "商品系列", "出厂价", "供货价", "零售价"],
+        "store": ["门店名称", "门店地址", "店主姓名", "联系方式", "所属连锁"],
+        "guide": ["导购姓名", "联系方式", "所属门店", "员工编号", "在岗状态"]
+      }
+      window.onload = function() {
+        $("#showstore").show();
+      };
+      $(".tabli").click(function() {
+        $(this).addClass("active").siblings().removeClass("active");
+        var name = '#' + $(this).attr('name');
+        $(".statement").hide();
+        $(name).show();
+        if($(this).attr('name') == 'statement'){
+            get_guide_statement();
+        };
+      });
+
+      $(".tableli").click(function() {
+        var key = $(this).attr('name');
+        $("#tabletype").html($(this).children().html());
+        $("#tabletype").attr('name', key);
+        var selectedValues = $('#multi-select').find('option:selected').text();
+        optionlist = tabledict[key];
+        var _h = '';
+        for (var i = 0; i < optionlist.length; i++) {
+          _h += '<option>' + optionlist[i] + '</option>';
+        };
+        $("#multi-select").html(_h);
+        $("#multi-select").multiSelect("refresh");
+      });
+
+      setupCSRF();
+      function upload_template() {
+        var fieldsList = [];
+        $('#multi-select').find('option:selected').each(function() {
+          var field = $(this).text();
+          fieldsList.push(field);
+        });
+        var template_type = $("#tabletype").attr('name');
+        fields = fieldsList.join('+');
+        console.log(template_type);
+        console.log(fields);
+        $.ajax({
+          type: "POST",
+          url: "/api/v1.0/dailystatement/excel-template",
+          data: {
+            "fields": fields,
+            "template_type": template_type
+          },
+          dataType: "json",
+          success: function(data) {
+            console.log(data);
+            console.log(data.code);
+            if(data.code == 0 ){
+                var name = '#' + template_type;
+                $(name).show("normal");
+            };
+
+          },
+        });
+       }
+
+       function get_guide_statement() {
+        $.ajax({
+            type: "GET",
+            url: "/api/v1.0/dailystatement/guide-statement",
+            dataType: "json",
+            success: function(data) {
+                console.log(data);
+                console.log(data.data);
+                var tr = $('<tr>'+ data.data +'</tr>');
+                $('thead').append(tr);
+            }
+        });
+       }
+      </script>
+
+                    <script type="text/javascript">
+                        jQuery(document).ready(function($)
+                        {
+                            var i = 1,
+                                $example_dropzone_filetable = $("#example-dropzone-filetable"),
+                                example_dropzone = $("#advancedDropzone").dropzone({
+                                url: 'data/upload-file.php',
+                                
+                                // Events
+                                addedfile: function(file)
+                                {
+                                    if(i == 1)
+                                    {
+                                        $example_dropzone_filetable.find('tbody').html('');
+                                    }
+                                    
+                                    var size = parseInt(file.size/1024, 10);
+                                    size = size < 1024 ? (size + " KB") : (parseInt(size/1024, 10) + " MB");
+                                    
+                                    var $el = $('<tr>\
+                                                    <td class="text-center">'+(i++)+'</td>\
+                                                    <td>'+file.name+'</td>\
+                                                    <td><div class="progress progress-striped"><div class="progress-bar progress-bar-warning"></div></div></td>\
+                                                    <td>'+size+'</td>\
+                                                    <td>Uploading...</td>\
+                                                </tr>');
+                                    
+                                    $example_dropzone_filetable.find('tbody').append($el);
+                                    file.fileEntryTd = $el;
+                                    file.progressBar = $el.find('.progress-bar');
+                                },
+                                
+                                uploadprogress: function(file, progress, bytesSent)
+                                {
+                                    file.progressBar.width(progress + '%');
+                                },
+                                
+                                success: function(file)
+                                {
+                                    file.fileEntryTd.find('td:last').html('<span class="text-success">Uploaded</span>');
+                                    file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
+                                },
+                                
+                                error: function(file)
+                                {
+                                    file.fileEntryTd.find('td:last').html('<span class="text-danger">Failed</span>');
+                                    file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
+                                }
+                            });
+                            
+                            $("#advancedDropzone").css({
+                                minHeight: 200
+                            });
+            
+                        });
+                    </script>
+  </body>
+
+</html>

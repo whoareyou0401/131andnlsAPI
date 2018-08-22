@@ -1,0 +1,61 @@
+.contain{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:3840px;
+    height:2160px;
+    background: #162037; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #162037 0%, #0E0E09 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#162037), color-stop(100%,#0E0E09)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #162037 0%,#0E0E09 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #162037 0%,#0E0E09 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #162037 0%,#0E0E09 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #162037 0%,#0E0E09 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162037', endColorstr='#0E0E09',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.icon-contain{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+.icon-contain img{
+    width: 230px;
+    height: 100px;
+}
+.sale-contain{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 150px;
+    width: 500px;
+    text-align: center;
+    font-size: 70px;
+    font-family:PingFang SC;
+}
+.sale-contain label{
+    color: red;
+}
+.number-contain{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    width: 600px;
+    text-align: center;
+    font-size: 50px;
+}
+.number-contain label{
+    /*height: 60px;*/
+    width: 40px;
+    border: 1px solid #16235b;
+    text-align: center;
+    margin-left: 10px;
+    /*padding-top: auto;
+    padding-bottom: auto;*/
+    margin-right: auto;
+    color: white;
+    font-family:PingFang SC;
+    background: #162752; /* Old browsers */
+    background: -moz-linear-gradient(top, #162752 0%, #3b59a4 50%, #162752 100%, #7db9e8 100%, #162752 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #162752 0%,#3b59a4 50%,#162752 100%,#7db9e8 100%,#162752 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #162752 0%,#3b59a4 50%,#162752 100%,#7db9e8 100%,#162752 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b59a4', endColorstr='#162752',GradientType=0 ); /* IE6-9 */
+}

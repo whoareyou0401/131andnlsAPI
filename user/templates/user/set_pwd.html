@@ -1,0 +1,194 @@
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="/static/css/recommend/recommend_topAndBottom.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/recommendorder/recommendorder_set_pwd.css">
+        <title>验证手机号</title>
+         <style>
+            main{
+                position:relative;
+            }
+            .box-wrap{
+                width:100%;
+                background-color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="home-info-top">
+                <div class="home-info-nav">
+                    <img src="/static/images/recommendorder/ic_back.png" class="home-info-nav-a">
+                    <p>验证手机号</p>
+                </div>
+            </div>
+        </header>
+  
+<main>
+  <div class="content">
+      <p>
+        <img src="static/images/recommendorder/phone.login.png">
+        <span class="box-input" style="border-bottom: 0;">
+          <input type="text" name="userId" class="userId" placeholder="请输入手机号" style="border-bottom: 1px solid #ffc8ba;width: 1.6rem;margin-right: .1rem;" />
+          <input for="show" type="submit" class="yanzhengId Get_verification_code_v2" id="btn" value="获取验证码" onclick="btnClick(this)" />
+        </span>
+      </p>
+      <b></b>
+      <p>
+        <img src="/static/images/recommendorder/yanzheng.png">
+        <span class="box-input">
+          <input type="text" name="userPwd" class="userPwd" placeholder="请输入验证码"/>
+        </span>
+      </p>
+      <b></b>
+      <div class="submit verification_v2">
+        <a class="login">
+          <input type="button" value="验证" onclick="verify()">
+        </a>
+      </div>
+
+
+
+  </div>
+
+</main>
+        <div class="model">
+            <div class="sign_in_ok">
+                <p class="ok"></p>
+                <p class="checkin_or_placeorder"></p>
+                <p class="sure_or_cancel">
+                    <span class="sure">确定</span>
+                </p>
+            </div>
+        </div>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_rem.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_set_pwd.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/commom.js"></script>
+<script src="/static/js/common/utils.js"></script>
+<script type="text/javascript">
+document.body.addEventListener('touchstart', function () {});
+var wait=120;
+function time(o) {
+    //btnClick();
+    if (wait == 0) {
+      o.removeAttribute("disabled");
+      o.value="获取验证码";
+      wait = 120;
+    } else {
+      o.setAttribute("disabled", true);
+      o.value= wait + "s重新发送";
+      wait--;
+      setTimeout(function() {
+        time(o)
+      },
+      1000)
+    }
+  }
+//document.getElementById("btn").onclick=function(){btnClick()}
+
+//           setupCSRF();
+          function btnClick(obj){
+            var type='forget';
+            var num=$('.userId').val();
+            if (num.length>0) {
+              $.ajax({
+                  type:"post",
+                  url:"verify-code",
+                  datatype:"json",
+                  data:{
+                    'phone_number':num,
+                    'verify_type':type,
+                    'csrfmiddlewaretoken':getCookie("csrftoken")
+
+                  },
+                  success:function(data){
+                    if(data.code==1){
+                      $('.ok').text(data.msg);
+                      $('.model').show();
+                      $('.sure').off('click').on('click',function() {
+                          $('.model').hide();
+                          var obj = document.getElementById("btn");
+                          obj.setAttribute("disabled",false);
+                          obj.value="获取验证码";
+                          wait = 0;
+                      });
+                    }else{
+                       $('.ok').text("验证码发送成功");
+                      $('.model').show();
+                      $('.sure').off('click').on('click',function() {
+                          $('.model').hide();
+                      });
+                    }
+                  },
+                  complete:function(){
+
+                  },
+                  error:function(){
+                    $('.ok').text("获取验证码失败");
+                      $('.model').show();
+                      $('.sure').off('click').on('click',function() {
+                          $('.model').hide();
+                          var obj = document.getElementById("btn");
+                          obj.setAttribute("disabled",false);
+                          obj.value="获取验证码";
+                          wait = 0;
+                      });
+                  }
+
+                })
+              time(obj);
+
+            }
+
+         }
+
+          function verify(){
+              var num=$('.userId').val();
+              var code=$('.userPwd').val();
+              if(num.length>0&&code.length>0){
+                  $.ajax({
+                    type:"post",
+                    url:"/verify-reset-pwd-code",
+                    datatype:"json",
+                    data:{
+                      'phone_number':num,
+                      'code':code,
+                      'csrfmiddlewaretoken':getCookie("csrftoken")
+                    },
+
+                    success:function(data){
+                        console.log(data);
+                      if(data.code==1){
+                        $('.ok').text("验证码不正确");
+                        $('.model').show();
+                        $('.sure').off('click').on('click',function() {
+                            $('.model').hide();
+                        });
+
+                      } else {
+                        window.location.href = data.msg;
+                      }
+                    },
+                    complete:function(){
+
+                    },
+                    error:function(){
+                      $('.ok').text('验证失败');
+                      $('.model').show();
+                      $('.sure').off('click').on('click',function() {
+                          $('.model').hide();
+                      });
+                    }
+
+                  })
+              }
+
+
+            }
+</script>
+<script src="/static/js/recommendorder/recommendorder_zhuge_analytics.js"></script>
+ </body>
+</html>

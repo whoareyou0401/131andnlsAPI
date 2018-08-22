@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <title>超盟</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/uploadfile.css' %}">
+    <link href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://malsup.github.io/jquery.form.js"></script>
+</head>
+<body style="background:black;">
+<script>
+    function pic1() {
+        var strs = new Array(); //定义一数组
+        var pic1= $("#fileinput").val();
+        strs = pic1.split('.');
+        var suffix = strs [strs .length - 1];
+
+        if (suffix != 'xls' && suffix != 'xlsx' && suffix != 'csv') {
+            alert("你选择的不是excel文件,请选择excel文件！");
+            var obj = document.getElementById('fileinput');
+            obj.outerHTML = obj.outerHTML; //这样清空，在IE8下也能执行成功
+        }
+    }
+</script>
+<script>
+    var fileform = document.getElementById("fileinput");
+    // fileform.onchange = "submitform()";
+    function submitform(){
+        document.form01.action = "/api/v1.0/dailystatement/update-work-plan";
+        document.form01.submit();
+        $("#border").append('<div id="loading" class="ui active inverted dimmer" ><div class="ui large text loader">正在上传，请稍后...</div></div>')
+    }
+</script>
+
+<script>
+        var result = "{{result}}";
+        if (result.length > 0){
+            alert(result);
+        }
+ </script>
+<h2 class="title-style">超盟</h2>
+<div class="container">
+
+            <div class="upload-div">
+                <div class="border-div">
+                    <center>
+                            <p style="padding-top:20px;">
+                               <form name="form01" method="post" enctype= "multipart/form-data">
+                                {% csrf_token %}
+
+                                <input type="hidden" name="xx" />
+                                  选择文件（自动上传）
+                                <input type= "file" name="file" multiple="multiple" id = "fileinput" onchange="submitform()" />
+                                </form>
+                            </p>
+                                <p style="color:white;font-size:12px;">支持Excel和CSV文件&nbsp; (Excel只支持单个sheet格式,最大100M.CSV最大800M)</p>
+                                <p style="color:white;font-size:12px;">默认值识别第一个sheet文件</p>
+                    </center>
+                    </div>
+
+            </div>
+            <div class="upload-div" style="margin-top:10px;height:220px;" id = 'border'>
+                <p style="color:white; font-size:16px;margin-left:50px;">表格示例</p>
+                <p style="color:white; font-size:12px;margin-left:50px;">请上传有标准行列的一维数据表格.(有合并表格的数据请处理过后再上传,否则可能出现识别表表头错误)</p>
+
+            </div>
+
+</div>
+
+
+
+
+</body>
+
+
+</html>

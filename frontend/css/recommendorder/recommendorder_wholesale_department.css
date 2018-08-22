@@ -1,0 +1,797 @@
+html,
+body,
+ul, li,
+div, img,
+table, tbody,
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+body { 
+  font-family: "PingFang SC";
+ 
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+i{
+  font-style: normal;
+}
+ .home-info-top{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  background-color: #ff4a0c;
+  z-index: 1;
+}
+.home-info-nav{
+  width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .28rem;
+  
+}
+.home-info-nav .home-info-nav-a{
+  width: .15rem;
+  height: .27rem;
+  position: absolute;
+  margin-top: -.135rem;
+  left: .21rem;
+  top: 50%;
+}
+.home-info-nav>p{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  
+}
+.home-info-nav .home-info-nav-b{
+  width: .26rem;
+  height: .26rem;
+  display: inline-block;
+  position: absolute;
+  right: .21rem;
+  margin-top: -.13rem;
+    top: 50%;
+}
+
+ 
+/*搜索栏*/
+.content{
+  
+}
+
+nav {
+  width: 100%;
+  
+  height: 0.68rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0.88rem;
+  z-index: 1;
+  border-bottom: 1px solid #dbdbdb;
+}
+nav .search-box {
+  position: relative;
+  display: block;
+  border: none;
+  outline: none; 
+  display: flex;
+  border-radius: 0.08rem;
+  width: 6.01rem;/*与原图的尺寸不一样原图应该是30.05rem但是效果不好  有待更改问设计师商量*/
+  height: 0.42rem;
+  margin-top: 0.13rem;
+  background-color: #f2f2f2;
+  margin-left: 0.21rem;
+}
+nav .search-box label.Search{
+  display: flex;
+  position: absolute;
+  border: none;
+  width: 0.64rem;
+  height: 100%;
+  background: url('../../images/recommendorder/ic_search.png') no-repeat center;
+  background-size: 38%;
+}
+nav .search-box label.no{
+  right: 0;
+  border: none;
+  width: 0.64rem;
+  height: 100%;
+  text-align: center;
+  float: left;
+  line-height: .41rem;
+  background:url('../../images/recommendorder/close.png') no-repeat center;
+  background-size: 38%;
+  
+}
+nav .search-box .search{
+  width: 4.82rem;
+  float: left;
+  border: 0px;
+  background-color: #f2f2f2;
+  font-size: 0.18rem;
+  color: #333;
+  padding-left:0.64rem;
+}
+
+main {
+  position: absolute;
+  top: 1.56rem;
+  width: 100%;
+  height: 78.03%;
+  border-top:  1px solid #dbdbdb;
+  background: #fff;
+}
+main .swiper-container {
+  width: 100%;
+  height: 2.58rem;
+  background-color: #fff;
+}
+main .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main .swiper-container .swiper-wrapper .swiper-slide {
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100% !important;
+}
+main .swiper-container .swiper-pagination span {
+  background-color: #f00;
+}
+main article{
+   white-space: nowrap;
+ overflow: scroll;
+}
+main article .list{
+
+ float: left;
+  width: 1.55rem;
+
+  height:78%;
+ 
+}
+main article .list:first-child{
+  position: fixed;
+  top: 1.56rem;
+  overflow: auto;
+}
+
+main article .list .nav-item{
+  display: block;
+  width: 100%;
+  border-right: 1px solid #dbdbdb;
+  border-bottom:  1px solid #dbdbdb;
+  border-top: 0;
+  box-sizing: border-box;
+  height: 0.63rem;
+  background: #fff;
+  font-size: 0.24rem;
+  line-height: 0.64rem;
+  text-align: center;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+  background-color: #f2f2f2;
+}
+main article .list .nav-item:first-child{
+  border-top: 0px;
+}
+main article .list .nav-item:last-child{
+  margin-bottom:.92rem;
+}
+main article .list .nav-item.active{
+    color:#ff4a0c;
+   background:#fff;
+}
+
+main article .list .nav-item:last-child{
+    padding-bottom:0rem;
+}
+
+main aside{
+position: relative;
+ float: right;
+ width: 4.85rem;
+  height: 100%;
+
+ 
+}
+main aside .ul-box{
+  height: 0.64rem;
+  width: 100%;
+  position: fixed;
+  top: 1.57rem;
+  z-index: 51;
+}
+main aside .ul-box ul{
+  padding:0 0.42rem 0 0.46rem;
+  height: 0.62rem;
+  text-align: center;
+  line-height: 0.62rem;
+  justify-content: space-between;
+
+
+}
+main aside .ul-box ul li{
+  float:left;
+  position: relative;
+} 
+main aside .ul-box ul li{
+  color: #333;
+  font-size: 0.24rem;
+}
+main aside .ul-box ul li .list.active{
+  color: #ff4a0c;
+}
+main aside .ul-box ul li:nth-of-type(2){
+  margin:0 0.6rem;
+   color: #333;
+  font-size: 0.24rem;
+}
+
+main aside .ul-box ul li:nth-of-type(2) span.ic-arrow{
+float: right;
+width: 0.21rem;
+height: 0.26rem;
+  margin-left: 0.03rem;
+ margin-top:0.17rem;
+ background:url('../../images/recommendorder/ic_arrow_up.png') no-repeat center;
+ background-size: 65%;
+}
+main aside section{
+  width:100%;
+  position:absolute;
+  top:.64rem;
+  height: 8.1rem;
+  overflow: auto;
+  margin-bottom:0;
+
+}
+
+main .swiper-container {
+  width: 100%;
+  height: 2.58rem;
+  background-color: #fff;
+}
+main .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main .swiper-container .swiper-wrapper .swiper-slide {
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100% !important;
+}
+main .swiper-container .swiper-wrapper .swiper-slide img{
+  width:100%;
+  height:2.58rem;
+  background: deeppink;
+}
+main .swiper-container .swiper-pagination span {
+  background-color: #ff4a0c;
+}
+
+main aside section .box{
+  width: 1.55rem;
+  display: block;
+  float: left;
+  font-family: "PingFang SC";
+}
+main aside section .list{
+  padding-left:0.13rem;
+  font-family: "PingFang SC";
+
+}
+main aside section .list:last-child{
+  padding-bottom:.98rem;
+
+}
+main aside section .list li{
+  /*height:1.05rem;*/
+  width:100%;  
+  padding-top:0.09rem;
+  border-bottom: 1px solid #dbdbdb;
+  /*position: relative;*/
+  overflow: hidden;
+}
+main aside section .list li img{
+  float:left;
+  margin-right:0.24rem; /* 自定义 */
+  width: 1.10rem;
+  height: 1.03rem;
+}
+main aside section .list li .list-con{
+  position: relative;
+  font-size:0.24rem; 
+  margin-right: 0;
+  overflow: hidden;
+  margin-top: .15rem;
+}
+main aside section .list li .list-con h3{
+   
+  color:#333;
+  font-size: 0.24rem;
+  font-family: "PingFang SC";
+font-weight: 400;
+   width: 2.8rem;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+
+}
+main aside section .list li .list-con p {
+  margin: 0.1rem 0;
+
+}
+main aside section .list li .list-con p span:nth-child(1){
+  color:#999;  /* 自定义字体颜色 */
+  
+  font-size: .2rem;
+   font-family: "PingFang SC";
+}
+main aside section .list li .list-con p span:nth-child(2){
+  display: inline-block;
+  width: .22rem;
+  height: .22rem;
+  background: url('../../images/recommendorder/promotion.png') no-repeat;
+  background-position: center;
+  margin-left: .17rem;
+  vertical-align: middle;
+  background-size: 80%;
+}
+main aside section .list li .list-con span{
+  color:#ff4a0c;
+  font-size: 0.24rem;
+  margin-bottom: 0.05rem;
+
+}
+main aside section .box{
+  width: 3.3rem;
+  float: left;
+  position: relative;
+  margin-bottom: 0.05rem;
+}
+main aside section .box .box-bottom{
+  height: .5rem;
+  width: 3.3rem;
+  line-height: .5rem;
+  position: relative;
+}
+
+main .box-bottom span:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: .5rem;
+}
+main aside section .list li .list-con .button{
+  float:left;
+  width:0.36rem;
+  height:0.36rem;
+  border-radius: 0.08rem;
+
+}
+
+main aside section .list li .list-con .button.reduce{
+  width:.7rem;
+  height: .7rem;
+  border:0;
+  outline:0;
+  position: relative;
+  bottom: .3rem;
+  outline: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+
+ 
+}
+main aside section .list li .list-con .button.plus{
+  width: .7rem;
+  height: .7rem;
+  border:0;
+  outline:0;
+  position: relative;
+  bottom:.3rem;
+  outline: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none; 
+}
+main aside section .list li .list-con .button.plus .area{
+  width: .5rem;
+  height: .5rem;
+  border:0;
+  outline:0;
+  background:#f2f2f2 url('../../images/recommendorder/ic_-plus.png') no-repeat center;
+  position: absolute;
+  margin-left: .05rem;
+  margin-top: .3rem;
+  background-size: 60%;
+}
+main aside section .list li .list-con .button.reduce .area{
+  width: .5rem;
+  height: .5rem;
+  border:0;
+  outline:0;
+   background:#f2f2f2 url('../../images/recommendorder/ic_-minus.png') no-repeat center;
+   position: absolute;
+  margin-left: .15rem;
+  margin-top: .3rem;
+  background-size: 60%;
+}
+main aside section .list li .list-con input{
+  padding: 0;
+  float:left;
+  width:.7rem;
+  height:.5rem;
+  outline:0;
+  border:0;
+  margin:0 0.05rem;
+  text-align: center;
+  font-size:0.24rem;
+  background: #f2f2f2;
+  display: inline-block;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  /*z-index: 1;*/
+  height: 0.92rem;
+  background: #fff;
+  width: 100%;
+  border-top: 1px solid #dbdbdb;
+  z-index: 99999;
+}
+footer .bottom{
+  display: block;
+  /* float: right; */
+  height: .92rem;
+  line-height: .92rem;
+  /* margin-right: .29rem; */
+  position: absolute;
+  right: 1.89rem;
+}
+
+footer .bottom span {
+  font-size:.26rem;
+  color:#ff4a0c;
+  font-weight:800;
+}
+footer .bottom span i {
+    font-size: .24rem;
+    font-weight: 600;
+   font-family: "PingFang SC";
+}
+.bottom span i{
+  font-style: normal;
+  font-size:.26rem;
+  color:#ff4a0c
+  font-weight:800;
+ font-family: "PingFang SC";
+
+}
+footer span.money {
+    position:absolute;
+    width:1.6rem;
+    height:.92rem;
+    background:#ff4a03;
+    right:0;
+    font-size:.26rem;
+    color:#fff;
+    text-align:center;
+    line-height:0.92rem;
+    display:block;
+    
+
+}
+.model,.add{
+  width: 6.4rem;
+  height: 11.36rem;
+  background:rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90909;
+
+}
+.model .call,.add .call{
+  width: 4.12rem;
+  height: 1.93rem;
+  background: white;
+  display: none;
+  z-index: 9999999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+  margin: auto;
+  border-radius: 0.08rem;  
+}
+.model .call p,.add .call p{
+  display: inline-block;
+}
+.model .call p:nth-child(1),.add .call p:nth-child(1){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  
+  margin-top: .37rem;
+  font-size: 0.26rem;
+  height: .26rem;
+  color: #333;
+  text-align: center;
+}
+
+.model .call p:nth-child(2),.add .call p:nth-child(2){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: 0.63rem;
+  font-size: .26rem;
+  color: #1578f0;
+  line-height: .63rem;
+  text-align: center;
+}
+.model .call p:nth-child(2) span,.add .call p:nth-child(2) span{
+  color: #333;
+  margin-left: .05rem;
+  
+}
+.model .call p:nth-child(3),.add .call p:nth-child(3){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: .66rem;
+  border-top: .01rem solid #dbdbdb;
+  position: relative;
+  bottom:0;
+
+}
+.model .call p:nth-child(3) .cancel,.add .call p:nth-child(3) .cancel{
+  float: left;
+  width: 2.05rem;
+  height: .6rem;
+  
+  border-right: 0.01rem solid #dbdbdb;
+  text-align: center;
+  line-height: .6rem;
+  font-size: .26rem;
+  color: #666;
+}
+.model .call p:nth-child(3) .sure,.add .call p:nth-child(3) .sure{
+  width: 2.06rem;
+  height: .6rem;
+  text-align: center;
+  line-height: .6rem;
+  float: left;
+  font-size: .26rem;
+  color: #ff4a0c;
+}
+.modelImg{
+  width: 6.4rem;
+  height: 11.36rem;
+  background:rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90909;
+
+}
+.modelImg img{
+  width: 4rem;
+  height: 4rem;
+  display: none;
+  z-index: 9999999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+  margin: auto;
+}
+.hide {
+  position: absolute;
+  top: 1.56rem;
+  width: 100%;
+  height: 78.03%;
+ /* border-top:  1px solid #dbdbdb;*/
+  background: #fff;
+  display: none;
+}
+
+.hide aside{
+position: relative;
+ float: right;
+ width: 100%;
+  height: 100%; 
+}
+
+.hide aside section{
+  width:100%;
+  position:absolute;
+  top:0rem;
+  min-height: 8.74rem;
+
+  overflow: auto;
+}
+
+.hide aside section .box{
+  width: 1.55rem;
+  display: block;
+  float: left;
+}
+.hide aside section .list{
+  padding-left:0.13rem;
+  padding-right:0.21rem;
+ 
+}
+.hide aside section .list li{
+  /*height:1.05rem;*/
+  width:100%;  
+  padding-top:0.09rem;
+  border-bottom: 1px solid #dbdbdb;
+  /*position: relative;*/
+  overflow: hidden;
+}
+.hide aside section .list li img{
+  float:left;
+  margin-right:0.24rem; /* 自定义 */
+  width: 1.10rem;
+  height: 1.03rem;
+}
+.hide aside section .list li .list-con{
+  position: relative;
+  font-size:0.24rem; 
+  margin-right: 0;
+  overflow: hidden;
+}
+.hide aside section .list li .list-con h3{
+   
+  color:#333;
+  font-size: 0.24rem;
+  font-family: "PingFang SC";
+   font-weight: 400;
+}
+.hide aside section .list li .list-con p{
+  color:#ccc;  /* 自定义字体颜色 */
+  margin: 0.1rem 0;
+  font-size: .2rem;
+}
+.hide aside section .list li .list-con span{
+  color:#ff4a0c;
+  font-weight: 600;
+  font-size: 0.24rem;
+  margin-bottom: 0.05rem;
+
+}
+.hide aside section .box{
+  width: 4.6rem;
+  float: left;
+  position: relative;
+  margin-bottom: 0.05rem;
+}
+.hide aside section .box .box-bottom{
+  height: .36rem;
+  width: 4.6rem;
+  line-height: .36rem
+}
+
+.hide .box-bottom span:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: .5rem;
+}
+.hide aside section .list li .list-con .button{
+  float:left;
+  width:0.36rem;
+  height:0.36rem;
+  border-radius: 0.08rem;
+
+}
+
+.hide aside section .list li .list-con .button.reduce{
+  width:.7rem;
+  height: .7rem;
+  border:0;
+  outline:0;
+  position: relative;
+  bottom: .3rem;
+  outline: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+
+ 
+}
+.hide aside section .list li .list-con .button.plus{
+  width: .7rem;
+  height: .7rem;
+  border:0;
+  outline:0;
+  position: relative;
+  bottom:.3rem;
+  outline: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+
+ 
+}
+.hide aside section .list li .list-con .button.plus .area{
+   width: .5rem;
+  height: .5rem;
+  border:0;
+  outline:0;
+  background:#f2f2f2 url('../../images/recommendorder/ic_-plus.png') no-repeat center;
+  position: absolute;
+  margin-left: .05rem;
+  margin-top: .3rem;
+  background-size: 60%;
+}
+.hide aside section .list li .list-con .button.reduce .area{
+  width: .5rem;
+  height: .5rem;
+  border:0;
+  outline:0;
+  background:#f2f2f2 url('../../images/recommendorder/ic_-minus.png') no-repeat center;
+  position: absolute;
+  margin-left: .15rem;
+  margin-top: .3rem;
+  background-size: 60%;
+}
+
+.hide aside section .list li .list-con input{
+  -webkit-appearance:none;
+  float:left;
+  width:.7rem;
+  height:.5rem;
+  padding: 0;
+  outline:0;
+  border:0;
+  margin:0 0.05rem;
+  text-align: center;
+  font-size:0.24rem;
+  background: #f2f2f2;
+  display: inline-block;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+main i{
+  width: 1.5rem;
+  height: .16rem;
+  display: block;
+  position: absolute;
+  right: .3rem;
+  top: .5rem;
+  left: 1.6rem;
+  color: #ff4a0c;
+  font-size: .16rem;
+
+}
+.hide i{
+  left: 3rem;
+  top: .38rem;
+}
+

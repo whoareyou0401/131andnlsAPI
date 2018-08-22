@@ -1,0 +1,38 @@
+body{
+    background-color: #ffffff;
+}
+.bg-con{
+    width: 100%;
+    height: auto;
+    margin-top: .88rem;
+    text-align: center;
+}
+.bg-con>img{
+    width: 3.8rem;
+    height: 1.5rem;
+    margin: .98rem auto .44rem;
+}
+.bg-con>p:nth-of-type(1){
+    font-size: .26rem;
+    margin-top: .14rem;
+    color: #333333;
+}
+.bg-con>p:nth-of-type(2){
+    font-size: .26rem;
+    margin-top: .38rem;
+    color: #333333;
+}
+.bg-con>div{
+    text-align: left;
+    margin-left: 23%;
+    margin-top: .9rem;
+    
+}
+.bg-con>div>p{
+    font-size: .2rem;
+    padding-left: .25rem;
+    margin-bottom: .4rem;
+    color: #999999;
+    background: url(/static/images/recommendorder/binding_pot.png) no-repeat left;
+    background-size: 2%;
+}

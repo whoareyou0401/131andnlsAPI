@@ -1,0 +1,328 @@
+
+html,
+body,
+ul, li,
+div, img,
+table, tbody,
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "PingFang SC";
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+i{
+  font-style: normal;
+}
+.clearfix:after{
+  content: '';
+  clear: both;
+  display: block;
+}
+/*头部*/
+.home-info-top{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  background-color: #ff4a0c;
+  z-index: 1;
+}
+.home-info-nav{
+  width: 100%;
+  height: .88rem;
+  line-height: .88rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: .28rem;
+  
+}
+.home-info-nav .home-info-nav-a{
+  width: .15rem;
+  height: .27rem;
+  position: absolute;
+  margin-top: -.135rem;
+  left: .21rem;
+  top: 50%;
+}
+.home-info-nav>p{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  
+}
+.home-info-nav .home-info-nav-b{
+  width: .26rem;
+  height: .26rem;
+  display: inline-block;
+  position: absolute;
+  right: .21rem;
+  margin-top: -.13rem;
+  top: 50%;
+}
+/*content*/
+main { 
+  height: auto;
+}
+main .content{
+  margin-top: .88rem;
+  width: 3.45rem;
+  margin-left: 1.475rem;
+  overflow: hidden;
+}
+main .content .logo{
+  width: 2.44rem;
+  height: 1.31rem;
+  margin: auto;
+  margin-top: .69rem;
+}
+main .content .cus-info{
+  margin: 0;
+  padding: 0;
+  height: .36rem;
+  width: 3.45rem; 
+  margin-top: .41rem;
+  position: relative;
+}
+main .content .cus-info img{
+
+  height: .24rem;
+  float: left;
+  position: absolute;
+  bottom:0;
+  
+}
+main .content .cus-info span{
+  width: 3.1rem;
+  height: .36rem;
+  float: left;
+  left: .34rem;
+  background: #fff;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: .24rem;
+  color: #333;
+  line-height: .36rem;
+  position: relative;
+  box-sizing: border-box;
+}
+main .content .box-input label{
+  float: right;
+  width: .48rem;
+  height: .36rem;
+}
+main .content .box-input label.showPwd{
+  background: url('/static/images/recommendorder/eye.close.png') no-repeat center;
+  background-size: 70%;
+}
+main .content .box-input input{
+  -webkit-appearance: none;
+  border:none;
+  outline: none;
+  width: 2.42rem;
+  border: 0px;
+  background-color: #fff;
+  font-size: 0.24rem;
+  color: #333;
+  height: .24rem;
+  position: absolute;
+  margin-bottom: 0.05rem;
+  border-radius: 0;
+  line-height: .24rem;
+  bottom: 0.01px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+main .content a{
+  display: block;
+  font-size: .18rem;
+  color: #ff4a0c;
+  float: right;
+  margin-top: .14rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+main .content .submit input:active{
+  opacity: 0.6;
+}
+main .content .submit input{
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  width: 3.45rem;
+  height: .65rem;
+  background: #ff4a0c;
+  border-radius: 0;
+  border-radius: 0.08rem;
+  font-size: .24rem;
+  color: #fff;
+  line-height: .65rem;
+  text-align: center;
+  margin-top: .45rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*main .content .submit input.active{
+  background: #ff4a0c;
+}*/
+main .content a.register{
+  display: block;
+  width: 3.45rem;
+  text-align: center;
+  margin-top: .35rem;
+}
+main .content .otherLogin{
+  position: relative;
+}
+main .content label.others{
+  font-size: .18rem;
+  color: #999;
+  display: block;
+  text-align: center;
+  margin-top: 3.1rem;
+}
+.one{
+  width: 0.4rem;
+  height: 1px;
+  color: #999;
+  position: absolute;
+  margin-top: .10rem;
+  left: .635rem;
+  background: #999;
+}
+.two{
+  width: 0.4rem;
+  height: 1px;
+  color: #999;
+  position: absolute;
+  margin-top:.10rem;
+  right: .635rem;
+  background: #999;
+}
+.content .login-other .weixin{
+  width: .47rem;
+  height: .38rem;
+  background: url('/static/images/recommendorder/weixin.png') no-repeat center;
+  float: left;
+  margin-left: 0.985rem;
+  margin-top: .41rem;
+}
+.content .login-other .qq{
+  width: .33rem;
+  height: .37rem;
+  background: url('/static/images/recommendorder/QQ.png') no-repeat center;
+  float: left;
+  margin-left: 0.68rem;
+  margin-top: .41rem;
+}
+input:-webkit-autofill { 
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset; 
+} 
+main .content b{
+  font-size: .18rem;
+  width: 3.45rem;
+  height: .18rem;
+  margin-top: .1rem;
+  color: #ffc8b6;
+  padding-left: .3rem;
+}
+.model{
+  width: 6.4rem;
+  height: 11.36rem;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90909;
+}
+.sign_in_ok{
+  width: 4.12rem;
+  height: 1.93rem;
+  background: white;
+  z-index: 9999999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+  margin: auto;
+  border-radius: 0.08rem;
+}
+.ok{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: .37rem;
+  font-size: 0.26rem;
+  height: .26rem;
+  color: #333;
+  text-align: center;
+}
+.checkin_or_placeorder{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 0.63rem;
+  font-size: .26rem;
+  color: #1578f0;
+  line-height: .63rem;
+  text-align: center;
+}
+.sure_or_cancel{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: .66rem;
+  border-top: 1px solid #dbdbdb;
+  position: relative;
+  bottom: 0;
+}
+.sure{
+  width: 4.10rem;
+  height: .6rem;
+  text-align: center;
+  line-height: .6rem;
+  float: left;
+  font-size: .26rem;
+  color: #ff4a0c;
+}
+.experience-enter{
+  display: block;
+  width: 2rem;
+  text-align: center;
+  margin: 1.5rem auto;
+  vertical-align: middle;
+  line-height: .35rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.experience-enter-text{
+  display: inline-block;
+  width: auto;
+  height: .35rem;
+  line-height: .35rem;
+  color: #999;
+  font-size: .22rem;
+}
+.experience-enter-img{
+  display: inline-block;
+  width: .17rem;
+  height: .17rem;
+  margin-left: .08rem;
+  position: relative;
+  top: 50%;
+  margin-top: -.09rem;
+}

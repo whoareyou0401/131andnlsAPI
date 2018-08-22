@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="/static/css/recommendorder/recommendorder_register.css">
+         <style>
+            main{
+                position:relative;
+            }
+            .box-wrap{
+                width:100%;
+                background-color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+
+    <header>
+    <div class="home-info-top">
+    <div class="home-status"></div>
+    <div class="home-info-nav">
+    <img src="/static/images/recommendorder/ic_back.png" class="home-info-nav-a">
+    <p>绑定手机号</p>
+  </div>
+
+</header>
+<main>
+  <div class="content">
+      <p>
+        <img src="/static/images/recommendorder/phone.login.png">
+        <span class="box-input" style="border-bottom: 0;">
+          <input type="text" name="phone_number" class="userId" placeholder="请输入手机号" style="border-bottom: 1px solid #ffc8ba;width: 1.6rem;margin-right: .1rem;" />
+          <input type="submit" class="yanzhengId" id="btn" value="获取验证码" onclick="btnClick(this)"/>
+        </span>
+      </p>
+      <b></b>
+      <p>
+        <img src="/static/images/recommendorder/yanzheng.png">
+        <span class="box-input">
+          <input type="text" name="verify_code" class="yanzheng" placeholder="请输入验证码"/>
+          <input type="hidden" name="verify_type" value="bind" id="verify_type">
+        </span>
+      </p>
+      <b></b>
+      <p>
+        <img src="/static/images/recommendorder/pwd.login.png">
+        <span class="box-input">
+          <input type="password" name="pwd" class="userPwd" placeholder="请输入密码"/>
+
+        </span>
+      </p>
+      <b></b>
+      <div class="submit">
+        <a href="#" class="login">
+          <input type="submit" value="验证" class="loginInput" id="register" onclick="register()">
+        </a>
+      </div>
+
+
+
+  </div>
+
+</main>
+
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_rem.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_register.js"></script>
+<script type="text/javascript" src="/static/js/recommendorder/recommendorder_common.js"></script>
+<script type="text/javascript">
+var wait=120;
+function time(o) {
+    console.log(9);
+    if (wait == 0) {
+      o.removeAttribute("disabled");
+      o.value="获取验证码";
+      wait = 120;
+    } else {
+      o.setAttribute("disabled", true);
+      o.value="(" + wait + ")s重新发送";
+      wait--;
+      setTimeout(function() {
+        time(o)
+      },
+      1000)
+    }
+  }           
+         function btnClick(obj){
+          console.log(1);
+            var type=$('#verify_type').val();
+            var num=$('.userId').val();
+            $.ajax({
+
+                  type:"post",
+                  url:"/verify-code",
+                  datatype:"json",
+                  data:{
+                    'phone_number':num,
+                    'verify_type':type,
+                    'csrfmiddlewaretoken':'{{csrf_token}}'
+
+                  },
+                  success:function(data){
+                    console.log(data.code+data.msg);
+                    if(data.code==1){
+                      alert(data.msg);
+                      console.log(data.msg);
+                    }else{
+                      alert("验证码发送成功");
+                      console.log("验证码发送成功");
+                    }
+                  },
+                  error:function(){
+                    alert("登录有误");
+                  }
+
+                })
+            time(obj);
+         }
+
+            function register(){
+            var code=$('.yanzheng').val();
+            var num=$('.userId').val();
+            var pwd=$('.userPwd').val();
+            $.ajax({
+
+                  type:"post",
+                  url:"/bind-phone",
+                  datatype:"json",
+                  data:{
+                    'phone_number':num,
+                    'verify_code':code,
+                    'csrfmiddlewaretoken':'{{csrf_token}}',
+                    'pwd':pwd,
+                    'source':'{{source}}',
+                    'sid':'{{openid}}'
+
+                  },
+                  success:function(data){
+                    //console.log(data.code+data.msg);
+                    if(data.code==1){
+                      alert(data.msg);
+                    }else{
+                      alert(data.msg);
+                    }
+                  },
+                  error:function(){
+                    alert("操作失败！请重试");
+                  }
+
+                })
+            }
+</script>
+ </body>
+</html>

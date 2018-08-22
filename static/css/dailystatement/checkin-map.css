@@ -1,0 +1,94 @@
+.amap-geolocation-con .amap-geo {
+    background-size: 70%;
+    width: 50px;
+    height: 50px;
+    border: .01rem solid #ccc;
+    border-radius: .03rem;
+    right: .04rem;
+}
+.amap-info-content {
+    width: 279px;
+    height: auto;
+    line-height: 1.8;
+    font-size: 10px;
+    padding: 10px 10px 10px 10px;
+}
+/*.amap-info-close {
+    position: absolute;
+    padding-right: .2rem;
+    top: .1rem;
+    padding-top: .1rem;
+    font: 700 .3rem/.12rem Tahoma,Verdana,sans-serif;
+}*/
+.amap-touch-toolbar .amap-zoomcontrol {
+    position: absolute;
+    bottom: 100px;
+    z-index: 500;
+    width: 50px;
+    height: 100px;
+}
+.amap-zoom-touch-minus, .amap-zoom-touch-plus {
+    width: 100%;
+    height: .5rem;
+}
+.amap-zoom-touch-minus>div, .amap-zoom-touch-plus>div {
+    margin: auto;
+    font-size: .26rem;
+    line-height: .5rem;
+}
+.amap-icon img {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    z-index: -1;
+}
+.hint-contain{
+    z-index: 6661123;
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    /*background-color: #333333;*/
+}
+.hint-show{
+    background-color: orange;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    display: inline-block;
+    float: left;
+}
+.hint-label{
+    margin-left:30px;
+}
+.hint-msg-container{
+     width:270px;
+     height:700px;
+     position: absolute;
+     top:0;
+     left:1210px;
+     background-color: rgb(251, 250, 245);
+}
+.checkin-account{
+    /*background-color: #999999;*/
+    width: 270px;
+    height: 130px;
+    border-bottom: 1px solid #999999;
+}
+.late-contain{
+    height: 285px;
+    width: 270px;
+    border-bottom: 1px solid #999999;
+}
+.leave-early-contain{
+    height: 285px;
+    width: 270px;
+}
+.title-label{
+    margin-top:10px;
+    padding-left:10px;
+    height: 30px;
+    width: 270px;
+    line-height: 30px;
+    font-size:20px;
+    color: red;
+}

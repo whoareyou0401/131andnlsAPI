@@ -1,0 +1,20 @@
+html, body, h3, p, ul, li, input, th, td, button{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #ABAEB3;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+input, select, button {
+    outline: none;
+}
+body{
+    position: relative;
+    background: #e7ebf1;
+    font-family: "Microsoft YaHei", "PingFangSC-Regular", "PingFang SC", "微软雅黑", sans-serif;
+}

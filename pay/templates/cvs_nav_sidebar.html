@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<!-- 导航栏 -->
+<div class="nav">
+    <div class="logo">
+        <img src="{% static 'images/analytics/logo.png' %}" draggable="false">
+         <h3>超便利系统后台</h3>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <!--<li class="inactive"><a href="commission">工资报表</a></li>-->
+            <li class="inactive"><a href="cvs-sales">销量统计</a></li>
+            <li class="inactive"><a href="stock-taking">库存盘点</a></li>
+            <li class="inactive"><a href="integration">积分管理</a></li>
+        </ul>
+    </div>
+    <div class="user-heads">
+        <a class="t5" alt="点击退出登陆" href="/logout">退出</a>
+    </div>
+</div>
+
+

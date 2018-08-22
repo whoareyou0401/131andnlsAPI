@@ -1,0 +1,130 @@
+.con {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+}
+/*顶部*/
+.home-info-top{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    background-color: #ff4a0c;
+    z-index: 999;
+}
+.home-status{
+    width: 100%;
+    height: .44rem;
+}
+.home-info-nav{
+    width: 100%;
+    height: .88rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: .28rem;
+}
+.top-back-con{
+    display: inline-block;
+    width: .15rem;
+    height: .27rem;
+    position: absolute;
+    margin-top: -.135rem;
+    left: .21rem;
+    top: 50%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.top-back-img{
+    width: .15rem;
+    height: .27rem;
+}
+.home-info-nav .home-info-nav-a{
+    width: .15rem;
+    height: .27rem;
+    position: absolute;
+    margin-top: -.135rem;
+    left: .21rem;
+    top: 50%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-info-nav>p{
+    display: inline-block;
+    height: .88rem;
+    line-height: .88rem;
+}
+.home-info-nav .home-info-nav-b{
+    width: .26rem;
+    height: .26rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    display: inline-block;
+    position: absolute;
+    right: .21rem;
+    margin-top: -.13rem;
+    top: 72%;
+}
+/*没有更多*/
+.nm-con{
+    width: 100%;
+    height: .82rem;
+    padding-bottom: .9rem;
+    /*position: absolute;
+    z-index: 221;
+    bottom: .98rem;*/
+
+}
+.nm{
+    width: 2.8rem;
+    height: .82rem;
+    line-height: .82rem;
+    margin: 0 auto;
+}
+.nm>p:nth-child(1){
+    display: inline-block;
+    width: .44rem;
+    height: 1px;
+    background-color: #cbcbcb;
+    vertical-align: middle;
+}
+.nm>p:nth-child(2){
+    display: inline-block;
+    color: #cbcbcb;
+    font-size: .18rem;
+    margin-left: .25rem;
+}
+.nm>p:nth-child(3){
+    display: inline-block;
+    width: .44rem;
+    height: 1px;
+    background-color: #cbcbcb;
+    vertical-align: middle;
+    margin-left: .25rem;
+}
+/*底部*/
+.home-bottom{
+    width: 100%;
+    height: .98rem;
+    background-color: #ffffff;
+    /*border-top: 1px solid #cbcbcb;*/
+    border-top: 1px solid #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    z-index: 223;
+}
+.home-bottom>li{
+    display: inline-block;
+    float: left;
+    width: 33%;
+    height: .75rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-bottom>li a{
+    display: block;
+    width: 1rem;
+    height: .75rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: .18rem;
+    color: #999999;
+    padding-top: .6rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+

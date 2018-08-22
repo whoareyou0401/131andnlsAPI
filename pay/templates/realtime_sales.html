@@ -1,0 +1,50 @@
+{% verbatim %}
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="format-detection" content="telephone=no, email=no"/>
+        <title>超便利-销售监控</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/pay/realtime_sales.css">
+
+        <link href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+        <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+        <script src="//cdn.bootcss.com/semantic-ui/2.2.7/semantic.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//cdn.bootcss.com/vue/2.2.1/vue.js"></script>
+        <script src="/static/js/common/utils.js"></script>
+        <script src="/static/js/pay/realtime_sales.js"></script>
+    </head>
+
+    <body>
+        <iframe
+  width="300"
+  height="200"
+  seamless
+  frameBorder="0"
+  scrolling="no"
+  src="http://54.223.222.250:12345/superset/explore/table/13/?form_data=%7B%22datasource%22%3A%2213__table%22%2C%22viz_type%22%3A%22dist_bar%22%2C%22slice_id%22%3A39%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22metrics%22%3A%5B%22sum__sum%22%5D%2C%22groupby%22%3A%5B%22nick_name%22%5D%2C%22columns%22%3A%5B%5D%2C%22row_limit%22%3Anull%2C%22color_scheme%22%3A%22bnbColors%22%2C%22show_legend%22%3Atrue%2C%22show_bar_value%22%3Afalse%2C%22bar_stacked%22%3Afalse%2C%22order_bars%22%3Afalse%2C%22y_axis_format%22%3A%22.3s%22%2C%22bottom_margin%22%3A75%2C%22x_axis_label%22%3A%22%E5%A4%A7%E5%AE%A2%E6%88%B7%22%2C%22y_axis_label%22%3A%22%E6%B6%88%E8%B4%B9%E9%87%91%E9%A2%9D%22%2C%22reduce_x_ticks%22%3Afalse%2C%22contribution%22%3Afalse%2C%22show_controls%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=200"
+>
+</iframe>
+        <!-- <div id="app" class='contain'>
+            <div>
+                <div class='icon-contain'>
+                    <img src="/static/images/logo.jpg">
+                </div>
+                <div class="sale-contain">
+                    <label>当日销售额</label>
+                </div>
+                <div class="number-contain">
+                    <label :id="'num-'+index" v-for="(row, index) in rows">{{row}}</label>
+                </div>
+            </div>
+
+
+        </div> -->
+
+    </body>
+
+</html>
+{% endverbatim %}

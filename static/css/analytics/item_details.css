@@ -1,0 +1,104 @@
+.menu-search {
+    margin-right: 42px;
+}
+.basic-indexes-total {
+    position: relative;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li>.notice {
+    float: right;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+.notice-info {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 28px;
+    width: 15.6%;
+    background: white;
+    padding: 24.5px 5px;
+    border: 1px solid #d0d5de;
+    text-align: center;
+    -webkit-box-shadow: 0 0 10px #d0d5de;
+    -moz-box-shadow: 0 0 10px #d0d5de;
+    -o-box-shadow: 0 0 10px #d0d5de;
+    box-shadow: 0 0 10px #d0d5de;
+}
+.notice:hover + .notice-info{
+    display: block;
+}
+.sale-details {
+    overflow: hidden;
+}
+.sale-details>li {
+    float: left;
+    margin: 45px 0 48px;
+    width: 33.2%;
+    text-align: center;
+    border-right: 1px solid #d0d5de;
+}
+.sale-details>li:last-of-type {
+    border: 0;
+}
+.sale-details>li p:nth-of-type(2) {
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: PingFangSC-Semibold, sans-serif;
+    color: #ff5422;
+    font-weight: bold;
+}
+.border-wrap {
+    position: relative;
+}
+.item-list {
+    overflow: hidden;
+}
+.item-list>li {
+    float: left;
+    margin: 20px 34px 20px 0;
+    padding: 20px 0;
+    width: 22.2%;
+    height: 172px;
+    text-align: center;
+}
+.item-list>li:last-of-type {
+    margin: 20px 0;
+}
+.item-list>li img {
+    width: 50%;
+}
+.item-list>li p {
+    margin-top: 20px;
+}
+
+/* 搜索框 */
+.search {
+    position: relative;
+}
+/* 搜索下拉框 */
+.drop-list {
+    display: none;
+}
+.search>input:focus + .drop-list {
+    display: block;
+    position: absolute;
+    top: 33px;
+    padding: 3px 8px;
+    width: 165px;
+    background: white;
+    -webkit-box-shadow: 0 0 10px #d0d5de;
+    -moz-box-shadow: 0 0 10px #d0d5de;
+    -o-box-shadow: 0 0 10px #d0d5de;
+    box-shadow: 0 0 10px #d0d5de;
+}
+.drop-list>a {
+    margin-bottom: 3px;
+    display: block;
+}
+.drop-list>a:hover {
+    background: #fbfcfe;
+}
+.drop-list>a:last-of-type {
+    margin-bottom: 0;
+}

@@ -1,0 +1,104 @@
+.table-module .table-wrap .area-list thead .th-second, .table-module .table-wrap .area-list tbody tr td:nth-child(2) {
+    min-width: 0px;
+}
+
+.table-module .table-wrap .area-list tbody.limit-height {
+    height: 500px;
+}
+
+.tag {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 50%;
+    transform: translate(0, -50%);
+}
+
+.table-module .title .store-options {
+    left: 40%;
+    width: 55%;
+}
+
+.ui.form {
+    position: absolute;
+    top: 65%;
+    left: 5px;
+    transform: translate(0, -50%);
+}
+
+.operate {
+    float: right;
+    margin-right: 20px;
+}
+
+.store-options .ui.icon.input{
+    width: 225px;
+}
+i {
+    cursor: pointer;
+}
+
+i.icon, i.icons {
+    padding-top: 4px;
+    font-size: 1.5em;
+    padding-right: 15px;
+    padding-left: 25px;
+    margin: 0;
+}
+
+.ui.page.dimmer {
+    color: white;
+}
+
+.add-guide {
+    display: none;
+    width: 100%;
+    height: 550px;
+    text-align: center;
+}
+
+.add-guide .ui.input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.choose_store {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.select-menu {
+    display: inline-block;
+    max-width: 12em;
+    margin: 5px;
+    height: 30px;
+}
+
+.add-guide .ui.input input, .add-guide.ui.input select {
+    max-width: 12em;
+    margin: 5px;
+    height: 35px;
+    background: rgba(6, 6, 6, 0);
+}
+
+.ui.selection.dropdown {
+    min-width: 12em;
+    background: rgba(255, 255, 255, 0);
+}
+
+span {
+    margin: 10px;
+}
+
+.table-module .table-wrap .area-list thead .th-first, .table-module .table-wrap .area-list tbody tr td:nth-child(1) {
+    position: relative;
+    left: 0;
+    padding: 0 0px;
+    max-width: 42px;
+    min-width: 42px;
+    text-align: center;
+}
+
+.leftsidebar{
+    padding-top: 80px;
+}

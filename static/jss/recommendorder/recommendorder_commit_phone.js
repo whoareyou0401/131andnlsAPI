@@ -1,0 +1,7 @@
+$(function(){
+ //点击返回按钮跳回道登录界面
+	 $('.home-info-nav-a').click(function(){
+	 	window.location.href="mlogin";
+	 });
+});
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJyZWNvbW1lbmRvcmRlci9yZWNvbW1lbmRvcmRlcl9jb21taXRfcGhvbmUuanMiXSwic291cmNlc0NvbnRlbnQiOlsiJChmdW5jdGlvbigpe1xuIC8v54K55Ye76L+U5Zue5oyJ6ZKu6Lez5Zue6YGT55m75b2V55WM6Z2iXG5cdCAkKCcuaG9tZS1pbmZvLW5hdi1hJykuY2xpY2soZnVuY3Rpb24oKXtcblx0IFx0d2luZG93LmxvY2F0aW9uLmhyZWY9XCJtbG9naW5cIjtcblx0IH0pO1xufSk7Il0sImZpbGUiOiJyZWNvbW1lbmRvcmRlci9yZWNvbW1lbmRvcmRlcl9jb21taXRfcGhvbmUuanMifQ==

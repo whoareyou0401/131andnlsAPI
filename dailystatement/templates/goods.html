@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>超盟 - 门店管理</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/style_table.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/data.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 -->
+{% include "nav_sidebar.html" %}
+<!-- 内容 -->
+<div class="content">
+    <div class="module-wrap">
+        <div class="table-module">
+            <div class="title">
+                <div class="store-options">
+                    <div class="ui search">
+                        <div class="ui icon input">
+                            <input id="args" class="prompt" type="text" placeholder="请输入商品名称 / 商品条码">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                    <div class="operate">
+                        <i id="add" class="add user icon"></i>
+                        <i id="delete" class="trash outline icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="add-guide">
+                <div id="title" class="ui horizontal divider">
+                    商品信息
+                </div>
+                <input id="id" type="hidden">
+                <div class="ui input">
+                    <span>商品名称：</span><input id="name" type="text" required>
+                </div>
+                <br>
+                <div class="ui input">
+                    <span>商品条码：</span><input id="barcode" type="text" required>
+                </div>
+                <br>
+                <br>
+                <button id="add-guide" class="circular ui icon button">
+                    提交
+                </button>
+                <button id="cancel" class="circular ui icon button">
+                    取消
+                </button>
+            </div>
+            <div class="table-wrap">
+                <div class="table-border">
+                    <table class="area-list" id="myTable">
+                        <thead class="cursor-defalut">
+                        <tr>
+                            <th class="th-first">
+                                <input class="checkbox_all" type="checkbox">
+                            </th>
+                            <th  value="name">
+                                商品名称
+                            </th>
+                            <th value="barcode">
+                                商品条码
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class="limit-height">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pagination-wrap">
+                <div class="pagination">
+                    <div class="page-num">每页10条</div>
+                    <select name="page" class="select-page">
+
+                    </select>
+                    <p>共<span>10</span>页 共<span>10</span>条</p>
+                    <div class="page-turing prev">
+                        <img src="{% static 'images/dailystatement/left.png' %}" alt="" draggable="false">
+                    </div>
+                    <div class="page-turing next">
+                        <img src="{% static 'images/dailystatement/right.png' %}" alt="" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.js"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/base.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/utils.js' %}"></script>
+<script type="text/javascript" src="{% static 'jss/dailystatement/goods-manage.js' %}"></script>
+</html>

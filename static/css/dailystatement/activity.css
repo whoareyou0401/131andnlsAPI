@@ -1,0 +1,34 @@
+/*.table-module .table-wrap .area-list thead .th-second, .table-module .table-wrap .area-list tbody tr td:nth-child(2) {*/
+    /*min-width: 0px;*/
+/*}*/
+
+.table-module .table-wrap .area-list tbody.limit-height {
+    height: 500px;
+}
+
+.table-module .title .store-options {
+    left: 40%;
+    width: 60%;
+}
+
+.ui.form {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+}
+
+.operate {
+    float: right;
+    margin-right: 20px;
+}
+
+.ui.page.dimmer {
+    color: white;
+}
+
+table img{
+    width: 100px;
+    height: 100px;
+}
+

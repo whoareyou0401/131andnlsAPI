@@ -1,0 +1,15 @@
+.select-btn-contain{
+    width: 100%;
+    border: 1px solid #e7ebf3;
+    height: 40px;
+    text-align:center;
+    line-height: 40px;
+}
+.select-btn-contain button{
+    width: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 30px;
+    border: 1px solid white;
+    line-height: 30px;
+}

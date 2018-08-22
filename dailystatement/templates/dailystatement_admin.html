@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>超盟 - 导购日报系统后台</title>
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/dailystatement/dailystatement_admin.css">
+
+    <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/static/js/common/utils.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="logodiv">
+    <!-- <img style="display:inline;" class="logo" src="/static/images/logo.png" height="60" width="180"/> -->
+</div>
+<div class="header">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="data-bg">
+
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <div class="data-bg">
+                <div class="search d1">
+                    <input onchange="showbrand()" id="search" placeholder="请输入品牌关键字查询..." type="text"
+                           autocomplete="off">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <div class="data-bg">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center">
+    <div class="row">
+        <div class="col-sm-2">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                <li class="tabli active" name="showbrand" role="presentation"><a href="#">企业列表</a></li>
+                <li class="tabli" name="createbrand" role="presentation"><a href="#">创建企业</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            <div class="panel panel-default" id="showbrand" style="display:none">
+                <table style="border:solid 0px #000" cellspacing="0" class="table">
+                <thead>
+                    <tr>
+                        <td>操作</td>
+                        <td>企业标准名称</td>
+                        <td>联系电话</td>
+                        <td>联系地址</td>
+                        <td>创建时间</td>
+                        <td>业务状态</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for brand in brand_list %}
+                    <tr>
+                        <td><span class="glyphicon glyphicon-trash" style="cursor:pointer" onclick="delTask('{{ brand.id }}');" data-toggle="modal" data-target="#del"></span></td>
+                        <td>{{ brand.standard_name }}</td>
+                        <td>{{ brand.telephone }}</td>
+                        <td>{{ brand.address }}</td>
+                        <td>{{ brand.create_time }}</td>
+                        <td>已开通</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                </table>
+                
+            </div>
+            <div id="createbrand" style="display:none">
+                <div class="panel panel-default">
+                    <div class="data-bg">
+                        <form class="form-horizontal" id="add" style="color:black" enctype="multipart/form-data" method="post">
+                            <div>
+                                <label for="standardName" class="col-sm-2 control-label">企业标准名称:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="standardName" id="standardName" value=""/>
+                                </div>
+                                <div class="col-sm-1">
+                                    <span class="requireinfo">*</span>
+                                </div>
+                                <br><br>
+                                <label for="telephone" class="col-sm-2 control-label">联系电话:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="telephone" id="telephone" value="" required/>
+                                </div>
+                                <div class="col-sm-1">
+                                    <span class="requireinfo">*</span>
+                                </div>
+                                <br><br>
+                                <label for="username" class="col-sm-2 control-label">用户名:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="username" id="username" value="" required/>
+                                </div>
+                                <div class="col-sm-1">
+                                    <span class="requireinfo">*</span>
+                                </div>
+                                <br><br>
+                                <label for="password" class="col-sm-2 control-label">密码:</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" name="password" id="password" value="" required/>
+                                </div>
+                                <div class="col-sm-1">
+                                    <span class="requireinfo">*</span>
+                                </div>
+                                <br>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-9"><span>(默认为联系电话)</span></div>
+                                <div class="col-sm-1"></div>
+                                <br><br>
+                                <label for="address" class="col-sm-2 control-label">联系地址:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="address" id="address" value=""/>
+                                </div>
+                                <div class="col-sm-1">
+                                </div>
+                                <br><br>
+                                <div class="col-sm-12" style="text-align: center;margin-top:20px">
+                                    <input class="btn btn-default" type="reset" value="重置" style="width:100px">
+                                    <input class="btn btn-default" onclick="addbrand()" value="确认添加" style="width:100px"/>
+                                </div>
+                            </div>
+                            <br><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    window.onload = function(){
+        $("#showbrand").show();
+    };
+    $(".tabli").click(function() {
+        $(this).addClass("active").siblings().removeClass("active");
+        var name = '#'+$(this).attr('name');
+        $("#showbrand").hide();
+        $("#createbrand").hide();
+        $(name).show();
+    });
+
+    // setupCSRF();
+    function addbrand(){
+        setupCSRF();
+        var self = this;
+        $.ajax({
+                type:"post",
+                url: "/dailystatement/add-brand",
+                data: {
+                        standardName: self.standardName.value,
+                        telephone: self.telephone.value,
+                        username: self.username.value,
+                        password: self.password.value,
+                        address: self.address.value
+                    },
+                success: function(data){
+                        console.log(data.success)
+                        if(data.success == 'success'){
+                            alert('添加成功');
+                        }
+                        else{
+                            alert('添加失败');
+                        }
+                        console.log(data);
+                        // location.reload() 
+
+                    }
+                });
+    }
+
+</script>
+</body>
+</html>

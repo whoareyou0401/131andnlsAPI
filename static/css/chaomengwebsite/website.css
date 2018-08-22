@@ -1,0 +1,217 @@
+@charset "UTF-8";
+html,
+body,
+div,
+ol, ul, li,
+a,
+img, form, input, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft Yahei';
+  list-style: none;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: auto;
+  font-weight: normal;
+}
+
+form,
+label,
+input,
+textarea, h2,
+span, p {
+  padding: 0;
+  margin: 0;
+}
+body{
+  min-width: 1280px;
+  min-height: 2000px;
+  position: relative;
+}
+.top{
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background: #f45722 url(../../images/chaomengwebsite/top.png) no-repeat center;
+}
+.top .logo{
+  position: absolute;
+  top: 20%;
+  right: 13%;
+}
+.one {
+  position: relative;
+  width: 100%;
+ min-height: 520px;
+  background:#f5f7f9;
+}
+.one .plusLeft{
+  position: absolute;
+  margin-top: 155px;
+ /* margin-left: 490px;*/
+ margin-left: 30%;
+}
+.one .plusRight{
+  position: absolute;
+  margin-top: 155px;
+  /*margin-left: 898px;*/
+  margin-left: 63%;
+}
+.one .common{
+  width: 237px;
+  height: 350px;
+  margin-top: 100px;
+  margin-left: 9.5%;
+  position: absolute;
+}
+.one .common img{
+  position: absolute;
+  margin-left: 56px;
+  display: inline-block;
+}
+.one .common p{
+  position: absolute;
+  width: 100%;
+  height: 16px;
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+}
+.one .common p:nth-child(2){
+  color: #333;
+  margin-top: 150px;
+}
+.one .common p:nth-child(3){
+  color: #ff4a0c;
+  font-size: 18px;
+  height: 18px;
+  margin-top: 184px;
+}
+.one .common p:nth-child(4){
+  margin-top: 229px;
+}
+.one .common p:nth-child(5){
+  margin-top: 261px;
+}
+.one .common p:nth-child(6){
+  margin-top: 293px;
+}
+.one .customer{
+  width: 400px;
+  /*margin-left: 517px;*/
+  margin-left: 34%;
+}
+.one .customer img{
+  position: absolute;
+  margin-left: 140px;
+}
+.two {
+  position: relative;
+  width: 100%;
+  min-height: 569px;
+  background:url(../../images/chaomengwebsite/data.png) no-repeat 21% 102px;
+}
+.one .online-record{
+  /*margin-left: 1000px;*/
+  margin-left: 72%;
+}
+.two ul{
+  width: 356px;
+  height: 145px;
+  position: absolute;
+  top:50%;
+  margin-top: -77px;
+  left: 60%;
+}
+.two li:nth-child(1){
+  height: 32px;
+  font-size: 32px;
+  color: #ff4a0c;
+}
+.two ul li:nth-child(2){
+  margin-top: 28px;
+}
+.two ul li{
+  height: 27px;
+  line-height: 27px;
+  font-size: 16px;
+  color: #666;
+}
+.three{
+  width: 100%;
+ min-height: 530px;
+  background:#f5f7f9 url(../../images/chaomengwebsite/note.png) no-repeat 87% 180px;
+ /* background-size: 40% 40%;*/
+ background-size: 20%;
+  position: relative;
+}
+.three ul{
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 87px;
+  left: 14%;
+}
+.three ul li:nth-child(1){
+  height: 32px;
+  font-size: 32px;
+  color: #ff4a0c;
+}
+.three ul li:nth-child(2){
+  
+  margin-top:50px;
+}
+.three ul li{
+  height: 27px;
+  font-size: 16px;
+  color: #666;
+  line-height: 27px;
+}
+
+.three ul li:nth-child(5){
+  margin-top:30px;
+}
+.three img{
+  position: absolute;
+  top:385px;
+  left: 13.6%;
+}
+.four{
+  width: 100%;
+  min-height: 321px;
+  position: relative;
+  background: #ff4a0c url(../../images/chaomengwebsite/bg_bottom.png) no-repeat center;
+}
+.four p{
+  width: 500px;
+  height: 36px;
+  font-size: 36px;
+  position: absolute;
+  top:90px;
+  left: 25%;
+  color: #fff;
+}
+.four .mlogo{
+  position: absolute;
+  left: 14%;
+  top:60px;
+}
+.four p:nth-child(3){
+  top: 159px;
+  font-size: 30px;
+}
+.four p:nth-child(4){
+  top: 227px;
+  font-size: 16px;
+}
+.four p:nth-child(5){
+  top: 302px;
+  font-size: 16px;
+  height: .2rem;
+  text-indent: 1rem;
+}
+.four p:nth-child(5) img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}

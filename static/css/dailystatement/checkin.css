@@ -1,0 +1,27 @@
+.ui.form {
+    float: right;
+    margin-right: 80px;
+    margin-top: 15px;
+}
+
+.table-module .table-wrap .area-list thead .th-first, .table-module .table-wrap .area-list tbody tr td:nth-child(7){
+    position: relative;
+    left: 0;
+    padding: 0 0px;
+    max-width: 42px;
+    min-width: 42px;
+    text-align: center;
+}
+
+ .table-module .table-wrap .area-list thead .th-last, .table-module .table-wrap .area-list tbody tr td:nth-child(8), .table-module .table-wrap .area-list tbody tr td:nth-child(9) {
+    position: relative;
+    left: 0;
+    padding: 0 0px;
+    max-width: 45px;
+    min-width: 45px;
+    text-align: center;
+}
+
+.table-module .table-wrap .area-list thead th:last-of-type, .table-module .table-wrap .area-list tbody td:last-of-type {
+    padding-right: 0;
+}

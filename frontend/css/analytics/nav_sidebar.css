@@ -1,0 +1,99 @@
+/* 侧边栏颜色 */
+.sidebar>div .options>a.sidebar-color{
+    color: #FF5422;
+}
+
+/* 导航栏 */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 1280px;
+    height: 60px;
+    overflow: hidden;
+    border-bottom: 3px solid #FF5422;
+    background: white;
+    z-index: 4;
+}
+.nav .logo{
+    position: absolute;
+    left: 30px;
+    margin-top: 16px;
+}
+.nav .logo>img{
+    vertical-align: bottom;
+    width: 92px;
+}
+.nav .logo>h3 {
+    margin: 0 0 3px 22px;
+    display: inline-block;
+    color: #6B7484;
+    font-size: 14px;
+    font-weight: normal;
+}
+/* '首页'- 已去掉 */
+/* .nav .logo .homepage {
+    position: relative;
+    margin-left: 78px;
+    display: inline-block;
+}
+.nav .logo .homepage>span {
+    color: #FF5422;
+}
+.nav .logo .homepage .triangle {
+    position: absolute;
+    bottom: -16px;
+    left: 28%;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ff5422;
+} */
+.nav .user-heads {
+    width: 32px;
+    position: absolute;
+    right: 42px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+/* 用户头像-已去掉 */
+/* .nav .user-heads>img {
+    width: 100%;
+} */
+
+/* 侧边栏 */
+.sidebar {
+    /* 自适应高度 */
+    position: fixed;
+    top: 63px;
+    bottom: 0;
+    width: 216px;
+    background: #2A2A2B;
+    z-index: 4;
+}
+.sidebar .management-analysis {
+    overflow: hidden;
+}
+.sidebar>div .title {
+    margin: 24px 48px;
+}
+.sidebar>div .title>a{
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+.sidebar>div .title>img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.sidebar>div .options {
+    padding: 22px 60px 0 80px;
+    overflow: hidden;
+    background: #1E1F20;
+}
+.sidebar>div .options>a {
+    margin-bottom: 22px;
+    display: block;
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 12px;
+    color: #d0d5de;
+}

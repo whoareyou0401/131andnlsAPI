@@ -1,0 +1,64 @@
+body, p, form {
+    padding: 0;
+    margin: 0;
+}
+
+.landed-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1000px;
+    height: 200px;
+}
+.landed-wrapper .landed {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+.landed-wrapper .landed>div{
+    display: inline-block;
+}
+.landed-wrapper .landed .landed-logo {
+    padding: 57px 88px 58px 0;
+    border-right: 1px solid #C2C1C2;
+    width: 25%;
+}
+.landed-wrapper .landed .landed-logo>img {
+    width: 100%;
+}
+
+.landed-wrapper .landed .landed-list {
+    padding-left: 8%;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    width: 35%;
+    height: 200px;
+}
+.landed-wrapper .landed .landed-list .button {
+    margin-top: 4%;
+}
+.landed-wrapper .landed .landed-list .button>input {
+    margin-bottom: 4%;
+    padding: 4%;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    font-size: 1em;
+}
+.landed-wrapper .landed .landed-list .button .warning {
+    margin-bottom: 4%;
+    text-align: left;
+    width: 100%;
+    height: 16px;
+    color: red;
+}
+.landed-wrapper .landed .landed-list .btn-bg {
+    background-color: #ff5522;
+    color: white;
+}

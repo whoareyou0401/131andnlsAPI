@@ -1,0 +1,41 @@
+.select-li{
+    height: 30px;
+    line-height: 30px;
+}
+.cell{
+    display: inline-block;
+    width:80px;
+    text-align: left;
+}
+.select-ul{
+    list-style: none;
+}
+#app{
+   margin-top: 50px;
+   text-align: center;
+}
+.ui.icon.input{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 320px;
+    display: inline-block;
+}
+.avg-contain{
+    margin-top:10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+.avg{
+    height: 36px;
+    line-height: 36px;
+}
+.avg input{
+    line-height: normal;
+    width:170px;
+    border: 0;
+    height: 36px;
+    line-height: 36px;
+}

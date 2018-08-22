@@ -1,0 +1,63 @@
+/* 当前页面选中状态 */
+.current-color{
+    color: #FF5422;
+}
+
+.nav-wrap{
+    width: 100%;
+    border-bottom: 3px solid #FF5422;≈
+}
+.nav{
+    position: relative;
+    width: 1000px;
+    height: 60px;
+    overflow: hidden;
+    background: white;
+    margin: 0 auto;
+}
+.nav .logo{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+}
+.nav .logo>img{
+    vertical-align: bottom;
+    width: 92px;
+}
+.nav .logo .homepage {
+    position: relative;
+    margin-left: 78px;
+    display: inline-block;
+}
+.nav .logo .homepage>a: -webkit-any-link {
+    color: #666;
+    cursor: pointer;
+}
+.nav .logo .homepage .triangle {
+    position: absolute;
+    bottom: -16px;
+    left: 28%;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #FF5422;
+}
+.nav .user-heads {
+    width: 32px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.nav .user-heads>a{
+    display: inline-block;
+}
+.nav .user-heads img {
+    width: 100%;
+    vertical-align: bottom;
+}
+.con-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}

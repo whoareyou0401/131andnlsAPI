@@ -1,0 +1,128 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>超盟 - 工资报表</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/style_table.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 -->
+{% include "nav_sidebar.html" %}
+<!-- 内容 -->
+<div class="content">
+    <div class="module-wrap">
+        <div class="table-module">
+            <div class="title">
+                <div class="store-options">
+                    <select class="ui search selection dropdown" id="year-select">
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                    </select>
+                    <span>年</span>
+                    <select class="ui search selection dropdown" id="month-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <span>月</span>
+                    <div class="ui search">
+                        <div class="ui icon input">
+                            <input class="prompt" type="text" placeholder="工资号／门店名">
+                            <i class="search icon"></i>
+                        </div>
+                        <div class="results"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 列表 -->
+            <div class="table-wrap">
+                <div class="table-border">
+                    <table class="area-list">
+                        <thead class="cursor-defalut">
+                        <tr>
+                            <th class="th-first" value="id">序号</th>
+                            <th class="th-third" value="number">
+                                工资号
+                                <div class="ascending">
+                                    <div class="up"></div>
+                                    <div class="down"></div>
+                                </div>
+                            </th>
+                            <th class="th-second" value="store_name">
+                                门店
+                                <div>
+                                    <div class="up"></div>
+                                    <div class="down"></div>
+                                </div>
+                            </th>
+                            <th class="th-third" value="commission">
+                                提成总额
+                                <div>
+                                    <div class="up"></div>
+                                    <div class="down"></div>
+                                </div>
+                            </th>
+                            <th class="th-third last-width" value="guides">
+                                促销员
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class="limit-height">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 分页 -->
+            <div class="pagination-wrap">
+                <div class="pagination">
+                    <div class="page-num">每页10条</div>
+                    <select name="page" class="select-page">
+
+                    </select>
+                    <p>共<span>10</span>页 共<span>10</span>条</p>
+                    <div class="page-turing prev">
+                        <img src="{% static 'images/analytics/left.png' %}" alt="" draggable="false">
+                    </div>
+                    <div class="page-turing next">
+                        <img src="{% static 'images/analytics/right.png' %}" alt="" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="{% static 'js/common/utils.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/tablesort.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/filesaver.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/tableexport.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/base.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/store-commission.js' %}"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.js"></script>
+</html>

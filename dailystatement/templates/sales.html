@@ -1,0 +1,235 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>超盟 - 销量统计</title>
+    <link rel="stylesheet" type="text/css"
+          href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/dailystatement/reset.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/dailystatement/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/dailystatement/style_table.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/dailystatement/sales.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 -->
+{% include "nav_sidebar.html" %}
+<!-- 内容 -->
+<div class="content">
+
+    <div class="module-wrap">
+        <div class="table-module">
+            <div class="title">
+                <div class="store-options">
+                    <div class="ui search date basic buttons">
+                        <button class="ui button active" id="lastweek">上周
+                        </button>
+                        <button class="ui button" id="lastmonth">上月</button>
+                        <button class="ui button" id="date-select">自定义</button>
+                    </div>
+                    <div class="ui search">
+                        <div class="ui icon input">
+                            <input id="args" class="prompt" type="text"
+                                   placeholder="门店名 / 导购名">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                    <div class="ui search option buttons">
+                        <button id="store" class="ui basic button active">
+                            按门店展示
+                        </button>
+                        <div class="or"></div>
+                        <button id="goods" class="ui basic button">按商品展示
+                        </button>
+                    </div>
+                    <div class="ui small basic icon buttons">
+                        <a href="sales-detail">
+                            <button class="ui basic button">查看明细</button>
+                        </a>
+                        <button class="ui button"><i class="download icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="triangle" name="total_sale">
+                    <div class="triangle-down"></div>
+                </div>
+            </div>
+            <div class="date-select">
+                <select class="ui search selection year-selection dropdown"
+                        id="start-year"> 
+                     </select> <span> 年 </span> 
+                <select class="ui search selection month-selection dropdown"
+                        id="start-month"> 
+                     </select> <span> 月 </span> 
+                <select class="ui search selection day-selection dropdown"
+                        id="start-day"> 
+                     </select> <span> 日 </span> 
+                <span> ~ </span> 
+                <select class="ui search selection year-selection dropdown"
+                        id="end-year"> 
+                     </select> <span> 年 </span> 
+                <select class="ui search selection month-selection dropdown"
+                        id="end-month"> 
+                     </select> <span> 月 </span>
+                <select class="ui search selection day-selection dropdown"
+                        id="end-day"> 
+                     </select> <span> 日 </span> 
+                <button class="circular ui icon button" id="usertime">
+                    <i class="icon search"></i>
+                </button>
+                <hr>
+            </div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="results">
+
+            </div>
+            <div class="results">
+
+            </div>
+            <div class="results">
+
+            </div>
+        </div>
+        <div class="loadmore">
+            <button id="loadmore" class="ui basic button">当前已加载<b></b>条数据，点击加载更多
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript"
+        src="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.js"></script>
+<script type="text/javascript"
+        src="{% static 'js/dailystatement/base.js' %}"></script>
+<script>
+    var sales_data;
+    var startIndex = 0;
+    var flag = false;
+
+    function fillData() {
+        flag = false;
+        $(".spinner").show();
+        $(".results").hide();
+        $(".results").html("");
+        var args = $("#args").val();
+        startIndex = 0;
+        if (start_time) {
+            $.ajax({
+                url: "/api/v1.0/dailystatement/sales",
+                data: {
+                    "start_time": start_time,
+                    "end_time": end_time,
+                    "args": args,
+                    "key": ""
+                },
+                type: "GET",
+                success: function (data) {
+                    sales_data = data;
+                    console.log(sales_data);
+                    loadresults();
+                    $(".spinner").hide();
+                    $(".results").show();
+                }
+            });
+        }
+
+    }
+
+
+    function loadresults(abnormal) {
+        if (flag) {
+            var num = startIndex + 1;
+            $("#loadmore").addClass("disabled");
+            $("#loadmore").text("已加载全部数据，共 " + num + " 条");
+            return;
+        }
+        var index = 20;
+        for (var i = startIndex; i < startIndex + index; i++) {
+            if (!sales_data.hasOwnProperty(i)) {
+                startIndex = i - 1;
+                flag = true;
+                break;
+            }
+            var _h = "<div class=\"result\"> \
+                        <div class=\"ui raised segment\"> \
+                            <a class=\"ui orange ribbon label\">" + sales_data[i]['store'] + "</a> \
+                            <div class=\"guide\"> \
+                            导购：<span>" + sales_data[i]['guide'] + "</span> \
+                        </div> \
+                        <div class=\"sales\"> \
+                            <div class=\"ui celled ordered list\">";
+            for (var j in sales_data[i]['sales']) {
+                sales = sales_data[i]['sales'][j];
+                var _h1 = "<div class=\"item\"><span>" + sales['goods'] + "</span><b>" + sales['num'] + "</b></div>";
+                _h += _h1
+            }
+            ;
+            _h += "</div></div></div></div>";
+            var minResult = $('.results')[0];
+            for (var j = 0; j < $('.results').length; j++) {
+                (function (j) {
+                    if ($(minResult).height() > $('.results').eq(j).height()) {
+                        minResult = $('.results')[j];
+                    }
+                })(j);
+            }
+            $(minResult).append(_h);
+        }
+        if (!flag) {
+            startIndex += index;
+        }
+        $("#loadmore").removeClass("disabled");
+        $("#loadmore").html("当前已加载<b></b>条数据，点击加载更多");
+        $("#loadmore b").text(startIndex);
+        $(".loadmore").show();
+    }
+
+    function findAbnormal() {
+        isnormal = false;
+        fillData();
+    }
+
+    $(document).ready(function () {
+        $(".sidebar li").eq(7).addClass("active").siblings().removeClass("active");
+        get_lastweek_time();
+        fillData();
+
+        $(".option .button").click(function () {
+            $(".option .button").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $(".search i").click(function () {
+            if ($.trim($(".search input").val()) !== "") {
+                fillData();
+            }
+        });
+
+        $(".search input").keydown(function (event) {
+            if (event.which == 13) {
+                fillData();
+            }
+        });
+        $("#loadmore").click(function () {
+            $("#loadmore").addClass("loading");
+            loadresults();
+            $("#loadmore b").text(startIndex);
+            $("#loadmore").removeClass("loading");
+        });
+        $(".download").click(function () {
+            location.href = "/api/v1.0/dailystatement/sales?download=1&start_time=" + start_time + "&end_time=" + end_time
+        });
+    });
+
+</script>
+</html>

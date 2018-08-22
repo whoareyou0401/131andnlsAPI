@@ -1,0 +1,186 @@
+        .Clear{
+                 clear:both;
+        }
+        .border-div{
+
+              background: #162037; /* Old browsers */
+              background: -moz-radial-gradient(center, ellipse cover,  #162037 0%, #0E0E09 100%); /* FF3.6+ */
+              background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#162037), color-stop(100%,#0E0E09)); /* Chrome,Safari4+ */
+              background: -webkit-radial-gradient(center, ellipse cover,  #162037 0%,#0E0E09 100%); /* Chrome10+,Safari5.1+ */
+              background: -o-radial-gradient(center, ellipse cover,  #162037 0%,#0E0E09 100%); /* Opera 12+ */
+              background: -ms-radial-gradient(center, ellipse cover,  #162037 0%,#0E0E09 100%); /* IE10+ */
+              background: radial-gradient(ellipse at center,  #162037 0%,#0E0E09 100%); /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162037', endColorstr='#0E0E09',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        .ccontent-right{
+              height:720px;
+              width:404px;
+              /*margin:20px;*/
+              float:right;
+              background:rgba(0, 0, 0, 1);
+              margin-left：0px;
+        }
+        .main{
+                height:664px;
+                width:770px;
+                margin:0px;
+                float:left;
+                padding-left: 60px;
+                padding-top: 32px;
+        }
+        .main canvas{
+          /*background:
+                -webkit-linear-gradient(top, transparent 21px, #081320 22px),
+                -webkit-linear-gradient(left, transparent 21px, #081320 22px) !important;
+            background-size: 22px 22px !important;*/
+
+
+        }
+
+        label{
+              text-align:center;
+              margin-bottom:10px;
+              margin-top:10px;
+        }
+        .first-five-div{
+               width:400px;
+
+               height:178px;
+               float: right;
+               border-left:2px solid #16235b;
+               border-right:2px solid #16235b;
+               margin-top: 18px;
+
+               padding-left:0px;
+               background:#0a1023;
+               margin-right: 46px;
+               /*padding-top:122px;*/
+
+        }
+        .main-outside{
+                background: -ms-linear-gradient(left, #111931, #090f1e);        /* IE 10 */
+
+                background:-moz-linear-gradient(left,#111931, #090f1e);/*火狐*/
+
+                background: -webkit-linear-gradient(left, #111931, #090f1e);   /*Safari5.1 Chrome 10+*/
+
+                background: -o-linear-gradient(left, #111931, #090f1e);
+
+        }
+        .line-div{
+               width:1px;
+
+               height:64px;
+               float: left;
+               border:1px solid #6278a2;
+               border-left:1px solid #6278a2;
+               border-right:1px solid #6278a2;
+               border-top:1px solid #6278a2;
+               border-bottom:1px solid #6278a2;
+               margin-top: 18px;
+               padding-right:4px;
+               margin-left:64px;
+               /*padding-top:122px;*/
+
+        }
+        .display-div{
+
+               margin-top: 12px;
+               margin-left:0px;
+        }
+        .linear{
+
+                width:130px;
+
+                height:10px;
+
+                FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#000,endColorStr=red); /*IE 6 7 8*/
+
+                background: -ms-linear-gradient(left, #f37003, #dd0100);        /* IE 10 */
+
+                background:-moz-linear-gradient(left,#f37003, #dd0100);/*火狐*/
+
+                background: -webkit-linear-gradient(left, #f37003, #dd0100);   /*Safari5.1 Chrome 10+*/
+
+                background: -o-linear-gradient(left, #f37003, #dd0100);  /*Opera 11.10+*/
+                display:inline-block;
+
+                margin-left:22px;
+
+        }
+        .weather-line-div{
+                  width:1px;
+                  height: 66px;
+                  margin-left: 130px;
+                  position:absolute;
+                  top:46px;
+                  border-left:1px solid #16235b;
+        }
+        .display-number-div{
+                    display:inline-block;
+                    margin-top: 8px;
+                    font-size: 16px;
+                    font-family:PingFang SC;
+                    width:18px;
+                    height:22px;
+                    background: #162752; /* Old browsers */
+                    background: -moz-linear-gradient(top, #162752 0%, #3b59a4 50%, #162752 100%, #7db9e8 100%, #162752 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top, #162752 0%,#3b59a4 50%,#162752 100%,#7db9e8 100%,#162752 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom, #162752 0%,#3b59a4 50%,#162752 100%,#7db9e8 100%,#162752 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b59a4', endColorstr='#162752',GradientType=0 ); /* IE6-9 */
+        }
+        .tianqi-img{
+                    width: 38px;
+                    height: 30px;
+                margin-top:23px;
+        }
+        .place-img{
+              position:absolute;
+              left:78px;
+              top:53px;
+              width:18px;
+              height:18px;
+        }
+        .number-span{
+                   display:inline-block;
+                    font-size:14px;
+                   color:#6278a2;
+                    margin-right:22px;
+                    padding-right:22px;
+                    text-align: right;
+                    margin-top: 0px;
+                    font-family:PingFang SC;
+        }
+        .img-div{
+                width:54px;
+                height:54px;
+                margin-left:16px;
+                margin-top:10px;
+                background:#3B81AA;
+                margin-bottom:10px;
+                display:inline-block;
+        }
+        .salesman-sign-div{
+                width:266px;
+                height:56px;
+                margin-left:16px;
+                margin-top:8px;
+
+                margin-bottom:10px;
+                display:inline-block;
+
+        }
+        .content{
+                    height:720px;
+                    width:1280px;
+                    margin-left：0px;
+
+                    background:
+                -webkit-linear-gradient(top, transparent 21px, #081320 22px),
+                -webkit-linear-gradient(left, transparent 21px, #081320 22px);
+            background-size: 22px 22px;
+
+
+
+
+        }

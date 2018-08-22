@@ -1,0 +1,119 @@
+body{
+  background-color: #ffffff;
+}
+.history_back {
+  display: inline-block;
+  width: .15rem;
+  height: .27rem;
+  position: absolute;
+  margin-top: -.135rem;
+  left: .21rem;
+  top: 18%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-info-nav-a1 {
+  width: .15rem;
+  height: .27rem;
+}
+.con{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.banner{
+  margin-top: 1.88rem;
+  width: 100%;
+  height: 2.35rem;
+  background: url('/static/images/recommendorder/delete_store.png') no-repeat center;
+  background-size: 53%;
+}
+form{
+  width: 100%;
+  height: auto;
+  padding-top: .63rem; 
+}
+.con_info{
+  width: 4.78rem;
+  height: auto;
+  margin: auto;
+}
+.address,.store_name,.tel,.tel_people{
+  position: relative;
+  width: 4.78rem;
+  height: .72rem;
+  border-bottom:.01rem solid #dbdbdb;
+  font-size: .24rem;
+  color: #333333;
+}
+.address_label,.store_name_label,.tel_label,.tel_people_label{
+  position: absolute;
+  left: .46rem;
+  bottom: .06rem;
+  font-size: .24rem;
+  color: #333333;
+}
+#address,#store_name,#tel,#tel_people{
+  position: absolute;
+  display: inline-block;
+  width: 3.4rem;
+  height: .32rem;
+  border:0;
+  font-size: .24rem;
+  color: #666666;
+  background-color: #ffffff;
+  left: 1.2rem;
+  bottom: .06rem;
+}
+#tel{
+  left: 1.68rem;
+}
+#tel_people{
+  left: 1.44rem;
+}
+.ps{
+  position: relative;
+  width: 4.78rem;
+  height: 1.07rem;
+  border-bottom:.01rem solid #dbdbdb;
+  font-size: .24rem;
+  color: #333333;
+}
+.ps_label{
+  position: absolute;
+  left: .46rem;
+  top: .31rem;
+  font-size: .24rem;
+  color: #333333;
+}
+#ps{
+  position: absolute;
+  display: inline-block;
+  width: 3.4rem;
+  height: .63rem;
+  border:.0;
+  outline:none;
+  font-size: .24rem;
+  color: #666666;
+  left: 1.2rem;
+  bottom: .09rem;
+  resize: none;
+}
+.submit_button{
+  width: 2.12rem;
+  height: .55rem;
+  background-color: #ffbc0c;
+  text-align: center;
+  line-height: .55rem;
+  color: #ffffff;
+  font-size: .26rem;
+  border-radius: .08rem;
+  margin: .45rem auto;
+}
+.ps_text{
+  width: 4.78rem;
+  height: .72rem;
+  font-size: .2rem;
+  color: #999999;
+  margin-left: .46rem;
+  margin-top: .13rem;
+}

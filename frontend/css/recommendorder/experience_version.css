@@ -1,0 +1,81 @@
+body{
+    background: #ffffff;
+}
+header{
+    width: 100%;
+    height: .88rem;
+}
+.version{
+    width: 4.95rem;
+    height: auto;
+    margin: 0 auto;
+}
+.customer-version:active{
+    opacity: 0.6;
+}
+.customer-version, .salesman-version{
+    display: block;
+    width: 4.95rem;
+    height: .75rem;
+    background-color: #f2f2f2;
+    color: #333333;
+    text-align: center;
+    line-height: .75rem;
+    border-radius: .08rem;
+    margin-top: 1rem;
+    font-size: .24rem;
+    border: 1px solid #dbdbdb;
+}
+.salesman-version:active{
+    opacity: 0.6;
+}
+.salesman-version{
+    margin-top: .55rem;
+}
+.tel-model{
+    width: 6.4rem;
+    height: 11.36rem;
+    background: rgba(0,0,0,0.45);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 90909;
+}
+.tel-model>div{
+    width: 4.12rem;
+    height: 1.93rem;
+    background: white;
+    z-index: 9999999999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    margin: auto;
+    border-radius: 0.08rem;
+}
+.is-tel{
+    width: 100%;
+    margin-top: .37rem;
+    font-size: 0.24rem;
+    height: .26rem;
+    color: #333;
+    text-align: center;
+}
+.sure:active{
+    opacity: 0.6;
+}
+.sure{
+    width: 100%;
+    height: .66rem;
+    line-height: .66rem;
+    text-align: center;
+    border-top: 1px solid #dbdbdb;
+    font-size: .24rem;
+    color: #ec6037;
+    position: absolute;
+    bottom: 0;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner" style="height: 900px;">
+        <div class="item active">
+            <div style="margin-left: 30px;margin-top: 140px;font-size: 30px;">
+        前日与昨日分时段销量前五
+    </div>
+    <div style="height:300px;margin-top:70px;margin-left:50px;width: 1800px;text-align:center;">
+            <div style="display:inline-block;width: 300px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">7am-11am</div>
+                <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/40/?form_data=%7B%22datasource%22%3A%2240__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A54%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__sales%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;margin-left:20px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">11am-2pm</div>
+                <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/42/?form_data=%7B%22datasource%22%3A%2242__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A55%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__sales%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;margin-left:20px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">2pm-5pm</div>
+                <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/46/?form_data=%7B%22datasource%22%3A%2246__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A57%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__sales%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;margin-left:20px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">5pm-8pm</div>
+                <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/116/?form_data=%7B%22datasource%22%3A%22116__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A84%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__sales%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;margin-left:20px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">8pm-次日7am</div>
+                <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/117/?form_data=%7B%22datasource%22%3A%22117__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A85%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__sales%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+
+    </div>
+
+        <!-- <img src="https://s3.cn-north-1.amazonaws.com.cn/standard/store_item/a20af03e-498b-3ade-ae59-875e256ce0f7_ori.jpg" alt="First slide"> -->
+        </div>
+        <div class="item">
+            <div style="margin-left: 20px;margin-top: 140px;font-size: 30px;">
+        昨日消费占比
+    </div>
+    <div style="height:30px;margin-top:40px;margin-left:40px;">
+
+            <div style="display:inline-block;width: 300px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">7am-11am</div>
+
+                <iframe
+                  marginheight="20"
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/55/?form_data=%7B%22datasource%22%3A%2255__table%22%2C%22viz_type%22%3A%22pie%22%2C%22slice_id%22%3A61%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22metrics%22%3A%5B%22sum__consume_coverage%22%5D%2C%22groupby%22%3A%5B%22hint%22%5D%2C%22limit%22%3A%220%22%2C%22pie_label_type%22%3A%22key%22%2C%22donut%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22labels_outside%22%3Atrue%2C%22color_scheme%22%3A%22bnbColors%22%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">11am-2pm</div>
+            <iframe
+              width="300"
+              height="300"
+              seamless
+              frameBorder="0"
+              scrolling="no"
+              src="http://54.223.222.250:12345/superset/explore/table/56/?form_data=%7B%22datasource%22%3A%2256__table%22%2C%22viz_type%22%3A%22pie%22%2C%22slice_id%22%3A62%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22metrics%22%3A%5B%22sum__consume_coverage%22%5D%2C%22groupby%22%3A%5B%22hint%22%5D%2C%22limit%22%3A%220%22%2C%22pie_label_type%22%3A%22key%22%2C%22donut%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22labels_outside%22%3Atrue%2C%22color_scheme%22%3A%22bnbColors%22%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+            >
+            </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">2pm-5pm</div>
+            <iframe
+              width="300"
+              height="300"
+              seamless
+              frameBorder="0"
+              scrolling="no"
+              src="http://54.223.222.250:12345/superset/explore/table/57/?form_data=%7B%22datasource%22%3A%2257__table%22%2C%22viz_type%22%3A%22pie%22%2C%22slice_id%22%3A63%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22metrics%22%3A%5B%22sum__consume_coverage%22%5D%2C%22groupby%22%3A%5B%22hint%22%5D%2C%22limit%22%3A%220%22%2C%22pie_label_type%22%3A%22key%22%2C%22donut%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22labels_outside%22%3Atrue%2C%22color_scheme%22%3A%22bnbColors%22%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+            >
+            </iframe>
+            </div>
+            <div style="display:inline-block;width: 300px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">5pm-8pm</div>
+            <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/54/?form_data=%7B%22datasource%22%3A%2254__table%22%2C%22viz_type%22%3A%22pie%22%2C%22slice_id%22%3A60%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22metrics%22%3A%5B%22sum__consume_coverage%22%5D%2C%22groupby%22%3A%5B%22hint%22%5D%2C%22limit%22%3A%220%22%2C%22pie_label_type%22%3A%22key%22%2C%22donut%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22labels_outside%22%3Atrue%2C%22color_scheme%22%3A%22bnbColors%22%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+                </div>
+            <div style="display:inline-block;width: 300px;">
+                <div style="display:inline-block;text-align: center;width: 300px;">8pm-次日7am</div>
+                <iframe
+                  width="300"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/58/?form_data=%7B%22datasource%22%3A%2258__table%22%2C%22viz_type%22%3A%22pie%22%2C%22slice_id%22%3A64%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22metrics%22%3A%5B%22sum__consume_coverage%22%5D%2C%22groupby%22%3A%5B%22hint%22%5D%2C%22limit%22%3A%220%22%2C%22pie_label_type%22%3A%22key%22%2C%22donut%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22labels_outside%22%3Atrue%2C%22color_scheme%22%3A%22bnbColors%22%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+    </div>
+        <!-- <img src="https://s3.cn-north-1.amazonaws.com.cn/standard/store_item/a55c70a5-49f8-3167-853f-aac65b1d0dd9_ori.jpg" alt="Second slide"> -->
+        </div>
+        <div class="item">
+        <!-- <img src="/wp-content/uploads/2014/07/slide3.png" alt="Third slide"> -->
+        <div style="height:300px;margin-top:180px;margin-left:30px;">
+
+            <div style="display:inline-block;width: 750px;margin-left:65px;">
+                <div style="display:inline-block;text-align: center;width: 750px;">近期大客户(30天内)</div>
+
+                <iframe
+                  width="650"
+                  height="300"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://54.223.222.250:12345/superset/explore/table/45/?form_data=%7B%22datasource%22%3A%2245__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A56%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__money%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+                >
+                </iframe>
+            </div>
+            <div style="display:inline-block;width: 750px;">
+                <div style="display:inline-block;text-align: center;width: 750px;">最近30天复购率top 5</div>
+            <iframe
+              width="650"
+              height="300"
+              seamless
+              frameBorder="0"
+              scrolling="no"
+              src="http://54.223.222.250:12345/superset/explore/table/39/?form_data=%7B%22datasource%22%3A%2239__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A53%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__sales%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=300"
+            >
+            </iframe>
+            </div>
+
+    </div>
+        </div>
+        <div class="item">
+            <div style="height:500px;margin-top:140px;margin-left:65px;">
+            <div style="display:inline-block;width: 750px;margin-left:35px;">
+                    <div style="display:inline-block;text-align: center;width: 750px;">今日销量总览</div>
+                    <iframe
+                    width="600"
+                    height="500"
+                    seamless
+                    frameBorder="0"
+                    scrolling="no"
+                    src="http://54.223.222.250:12345/superset/explore/table/178/?form_data=%7B%22datasource%22%3A%22178__table%22%2C%22viz_type%22%3A%22table%22%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__num%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=500"
+                  >
+                  </iframe>
+                </div>
+                <div style="display:inline-block;width: 750px;">
+                <div style="display:inline-block;text-align: center;width: 750px;">最近七天销量前二十</div>
+                    <iframe
+                    width="600"
+                    height="500"
+                    seamless
+                    frameBorder="0"
+                    scrolling="no"
+                    src="http://54.223.222.250:12345/superset/explore/table/163/?form_data=%7B%22datasource%22%3A%22163__table%22%2C%22viz_type%22%3A%22table%22%2C%22slice_id%22%3A109%2C%22granularity_sqla%22%3Anull%2C%22time_grain_sqla%22%3A%22Time+Column%22%2C%22since%22%3A%22100+years+ago%22%2C%22until%22%3A%22now%22%2C%22groupby%22%3A%5B%22name%22%5D%2C%22metrics%22%3A%5B%22sum__num%22%5D%2C%22include_time%22%3Afalse%2C%22all_columns%22%3A%5B%5D%2C%22order_by_cols%22%3A%5B%5D%2C%22table_timestamp_format%22%3A%22%25Y-%25m-%25d+%25H%3A%25M%3A%25S%22%2C%22row_limit%22%3Anull%2C%22page_length%22%3A0%2C%22include_search%22%3Afalse%2C%22table_filter%22%3Afalse%2C%22where%22%3A%22%22%2C%22having%22%3A%22%22%2C%22filters%22%3A%5B%5D%7D&standalone=true&height=500"
+                  >
+                  </iframe>
+            </div>
+            </div>
+        </div>
+        <!-- <div class="item">
+        <img src="/wp-content/uploads/2014/07/slide3.png" alt="Third slide">
+        </div>
+        <div class="item">
+        <img src="/wp-content/uploads/2014/07/slide3.png" alt="Third slide">
+        </div> -->
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+</div>
+
+<!-- 控制按钮 -->
+
+<div style="text-align:center;">
+    <!-- <input type="button" class="btn start-slide" value="开始轮播"> -->
+    <input type="button" class="btn pause-slide" value="暂停">
+    <input type="button" class="btn prev-slide" value="前一页">
+    <input type="button" class="btn next-slide" value="后一页">
+    <!-- <input type="button" class="btn slide-one" value="Slide 1">
+    <input type="button" class="btn slide-two" value="Slide 2">
+    <input type="button" class="btn slide-three" value="Slide 3"> -->
+</div>
+<script>
+    $("#myCarousel").carousel('cycle');
+    $(function(){
+        // 初始化轮播
+        $(".start-slide").click(function(){
+            $("#myCarousel").carousel('cycle');
+        });
+        // 停止轮播
+        $(".pause-slide").click(function(){
+            $("#myCarousel").carousel('pause');
+        });
+        // 循环轮播到上一个项目
+        $(".prev-slide").click(function(){
+            $("#myCarousel").carousel('prev');
+        });
+        // 循环轮播到下一个项目
+        $(".next-slide").click(function(){
+            $("#myCarousel").carousel('next');
+        });
+        // 循环轮播到某个特定的帧
+        $(".slide-one").click(function(){
+            $("#myCarousel").carousel(0);
+        });
+        $(".slide-two").click(function(){
+            $("#myCarousel").carousel(1);
+        });
+        $(".slide-three").click(function(){
+            $("#myCarousel").carousel(2);
+        });
+    });
+</script>
+<script language="JavaScript">
+function myrefresh()
+{
+   window.location.reload();
+}
+setTimeout('myrefresh()',60000*5); //指定1秒刷新一次
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+*{
+  margin: 0;
+  padding:0;
+}
+.masthead.segment {
+  padding-top: 5em;
+}
+
+.main.container > h2 {
+  position: relative;
+  padding-top: 2em;
+}
+/*模态框*/
+.isOpen_model,.changeInfo_model,.export_model,.delete_model,.invite_model,.entering_model,.inviteRes_model{
+  background:rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90909;
+}
+.isOpen_model .isOpen_text,.export_model .export,.delete_model .delete,.invite_model .invite,.entering_model .entering_text,.inviteRes_model .invite{
+  width: 412px;
+  height: 193px;
+  background: white;
+  display: block;
+  z-index: 9999999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 8px;  
+}
+.isOpen_model .isOpen_text p,.export_model .export p,.delete_model .delete p,.invite_model .invite p,.entering_model .entering_text p{
+  display: inline-block;
+}
+.isOpen_model .open_or_close,.export_model .isExport,.delete_model .isDelete,.invite_model .isInvite,.entering_model .isEntering{
+  padding: 0;
+  margin:0;
+  width: 100%;
+  margin-top: 37px;
+  font-size: 26px;
+  height: 90px;
+  color: #333;
+  text-align: center;
+}
+.isOpen_model .isOpen_text p:nth-child(2),.export_model .export p:nth-child(2),.delete_model .delete p:nth-child(2),.invite_model .invite p:nth-child(2),.entering_model .entering_text p:nth-child(2){
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: 66px;
+  border-top: 1px solid #dbdbdb;
+  position: relative;
+
+}
+.isOpen_model .isOpen_text p:nth-child(2) .cancel,.export_model .export p:nth-child(2) .cancel,.delete_model .delete p:nth-child(2) .cancel,.invite_model .invite p:nth-child(2) .cancel,.entering_model .entering_text p:nth-child(2) .cancel{
+  float: left;
+  width: 205px;
+  height: 65px;
+  border-right: 1px solid #dbdbdb;
+  text-align: center;
+  line-height: 65px;
+  font-size: 26px;
+  color: #666;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.isOpen_model .isOpen_text p:nth-child(2) .sure,.export_model .export p:nth-child(2) .sure,.delete_model .delete p:nth-child(2) .sure,.invite_model .invite p:nth-child(2) .sure,.entering_model .entering_text p:nth-child(2) .sure{
+  width: 200px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  float: left;
+  font-size: 26px;
+  color: #ff4a0c;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.inviteRes_model .isInviteRes{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 37px;
+  font-size: 26px;
+  height: 90px;
+  color: #333;
+  text-align: center;
+}
+.isInviteBea{
+  
+}
+.inviteRes_model .sure{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 53px;
+  line-height: 53px;
+  font-size: 24px;
+  color: #ff4a0c;
+  text-align: center;
+  border-top: 1px solid #dbdbdb;
+  position: relative;
+}
+/*修改部分模太框*/
+.salesman_form,.customer_form{
+  width: 478px;
+  background: white;
+  display: block;
+  z-index: 9999999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 8px;
+}
+.salesman_form{
+  height: 400px;
+}
+
+.customer_form{  
+  height: 200px;
+}
+.con_info{
+  width: 478px;
+  height: auto;
+  margin: auto;
+}
+.sal_ps{
+  position: absolute;
+  left: 46px;
+  width: auto;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ff4a0c;
+}
+.address,.store_name,.tel,.tel_people,.salesman_name,.account,.password{
+  position: relative;
+  width: 478px;
+  height: 72px;
+  /*border-bottom:1px solid #dbdbdb;*/
+  font-size: 24px;
+  color: #333333;
+}
+.address_label,.store_name_label,.tel_label,.tel_people_label,.salesman_name_label,.account_label,.password_label{
+  position: absolute;
+  left: 46px;
+  bottom: 6px;
+  font-size: 24px;
+  color: #333333;
+  /*font-weight: bolder;*/
+}
+.model_address,.model_store_name,.model_tel,.model_tel_people,.model_salesman_name,.sal-select,.model_tel_method,.model_salesman_name_input,.model_account,.model_password{
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  height: 32px;
+  border:0;
+  font-size: 24px;
+  color: #666666;
+  /*font-weight: bolder;*/
+  left: 168px;
+  bottom: 2px;
+}
+.model_tel_people,.model_salesman_name{
+  left: 144px;
+}
+.model_tel_method{
+  left: 162px;
+}
+.model_account,.model_password{
+  left: 110px;
+}
+.model_salesman_name_input{
+  left: 177px;
+}
+.opt{
+  width: 300px;
+  height: 50px;
+  margin: 60px auto;
+  position: relative;
+}
+.opt_cancel{
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  left: 0;
+  border-radius: 8px;
+  border: 1px solid #666666;
+  position: absolute;
+  color: #666666;
+  font-size: 26px;
+}
+.opt_sure{
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  right: 0;
+  background-color: #ffbc0c;
+  border-radius: 8px;
+  position: absolute;
+  color: #666666;
+  font-size: 26px;
+}
+#nav {
+  float: left;
+}
+
+#table {
+  width: 60%;
+  margin-left: 25%;
+}
+.product-img{
+  width: 50px;
+  height: 50px;
+}
+.add-series-model,.add-seriesProduct-model,.move-product-model,.disable-product-model,.upload-productImg-model{
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.45);
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90909;
+}
+.add-series-model>div,.add-seriesProduct-model>div,.disable-product-model>div,.upload-productImg-model>div{
+  width: 400px;
+  height: 200px;
+  background: white;
+  z-index: 99999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 8px;
+}
+.move-product-model>div{
+  width: 600px;
+  height: 200px;
+  background: white;
+  z-index: 99999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 8px;
+}
+.move-text{
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.product-img-from{
+  width: 180px;
+  height: 100px;
+  border: 1px solid #f2f2f2;
+}
+.product-img-from>input:nth-of-type(2){
+  width: 100%;
+  height: 30px;
+  margin: 10px auto;
+  display: block;
+}
+.product-img-from>input:nth-of-type(3){
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  float: left;
+  margin-left: 40px;
+  background-color: #ffbc0c;
+  color: #ffffff;
+}
+.product-img-from>button{
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  float: left;
+  margin-left: 40px;
+  background-color: #dbdbdb;
+  color: #ffffff;
+}
+.clearfix:after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.pass,.refuse,.delCusItem{
+  display: block;
+  width: 60px;
+  height: 30px;
+  border:1px solid #f2f2f2;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.pass{
+  background-color: #09bb07;
+}
+.refuse{
+  background-color: #ffbc0c;
+}
+.delCusItem{
+  background-color: #ff4a0c;
+}
+/*活动管理*/
+.popup-con,.banner-con{
+  width: auto;
+  height: 300px;
+}
+.popup-con{
+  margin-top: 20px;
+}
+.eve-form{
+  width: 49%;
+  height: 250px;
+  border: 1px solid #f2f2f2;
+  display: inline-block;
+}
+.eve-div{
+  width: 100%;
+  height: 250px;
+}
+.eve-title{
+  font-size: 22px;
+  font-weight: bolder;
+}
+.eve-img{
+  display: inline-block;
+  width: 170px;
+  height: 170px;
+  vertical-align: top;
+}
+.eve-require{
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.select-img{
+  display: block;
+  max-width: 200px;
+  width: auto;
+}
+.preview-img{
+  margin-top: 10px;
+  width: 50px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #ffbc0c;
+  border:0;
+  color: #ffffff;
+}
+/*帐号管理*/
+.enteringActive{
+  width: 60px;
+  height: 30px;
+  background-color: #ffbc0c;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  opacity: 0.4;
+}
+.invitionOk{
+  width: 60px;
+  height: 30px;
+  background-color: #16ab39;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  opacity: 0.4;
+}
+.invitionOkTr,.enteringOkTr{
+  color: #d4d4d5;
+}
+.invition-ps{
+  color: #ff4a0c;
+  margin-top: 10px;
+}
+.invitionFinish{
+  width: 60px;
+  height: 30px;
+  background-color: #ffbc0c;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+}
+.invitionNo,.enteringNo{
+  width: 60px;
+  height: 30px;
+  background-color: #bdbdbd;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+}
+.clear-img{
+  margin-top: 10px;
+  width: 50px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #ff4a0c;
+  border: 0;
+  color: #ffffff;
+}

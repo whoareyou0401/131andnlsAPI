@@ -1,0 +1,115 @@
+body{
+  background-color: #ffffff;
+}
+.history_back {
+  display: inline-block;
+  width: .15rem;
+  height: .27rem;
+  position: absolute;
+  margin-top: -.135rem;
+  left: .21rem;
+  top: 50%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-info-nav-a1 {
+  width: .15rem;
+  height: .27rem;
+}
+.con{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.banner{
+  margin-top: 3.41rem;
+  width: 100%;
+  height: 1.5rem;
+  background: url('/static/images/recommendorder/logon_finish.jpg') no-repeat center;
+  background-size: 50%; 
+}
+form{
+  width: 100%;
+  height: auto;
+
+}
+
+.finish{
+	width: 100%;
+	font-size: 0.24rem;
+	color: #333;
+	text-align: center;
+	margin-top: 0.24rem;
+	margin-bottom: 1.5rem;
+}
+.submit_button:active{
+  opacity: 0.6;
+}
+.submit_button{
+ 
+  width: 3.45rem;
+  height: .65rem;
+  background-color: #ff4a0c;
+  text-align: center;
+  line-height: .65rem;
+  color: #ffffff;
+  font-size: .24rem;
+  border-radius: .08rem;
+  margin: .45rem auto;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.tel-model{
+    width: 6.4rem;
+    height: 11.36rem;
+    background: rgba(0,0,0,0.45);
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 90909;
+}
+.tel-model>div{
+    width: 4.1rem;
+    height: 2.2rem;
+    background: white;
+    z-index: 9999999999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    margin: auto;
+    border-radius: 0.08rem;
+}
+.is-tel{
+    display: block;
+    width: 100%;
+    font-size: 0.24rem;
+    height: 1.38rem;
+    color: #333;
+    line-height: 1.38rem;
+    text-align: center;
+}
+.sure:active{
+    opacity: 0.6;
+}
+.sure{
+    width: 100%;
+    height: .86rem;
+    line-height: .86rem;
+    text-align: center;
+    border-top: 1px solid #dbdbdb;
+    font-size: .24rem;
+    color: #ec6037;
+    position: absolute;
+    bottom: 0;
+}
+.init-password{
+  position: relative;
+  border: 0;
+  margin-left: .45rem;
+  margin-top: .2rem;
+  color: #999999;
+}

@@ -1,0 +1,229 @@
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+body{
+	background-color:#f2f2f2;
+}
+.home-con{
+	width: 100%;
+	height:auto;
+	background-color:#f2f2f2;
+}
+.home-setting{
+	display: inline-block;
+	width: .26rem;
+	height: .26rem;
+	position: absolute;
+	right: .21rem;
+	margin-top: -.13rem;
+    top: 42%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-info-nav .home-info-nav-b{
+	width: .26rem;
+	height: .26rem;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	display: inline-block;
+    position: absolute;
+    right: .21rem;
+    margin-top: -.13rem;
+    top: 72%;
+}
+
+.home-info-banner{
+	width: 100%;
+	height: 2.27rem;
+	background-color: #ff4a0c;
+	position: fixed;
+	top: .87rem;
+	z-index: 998;
+}
+
+.home-info-con{
+	width: 100%;
+	height: 2.07rem;
+	background: url('../../images/recommendorder/bg_card.png') no-repeat;
+	background-position: 90% .43rem;
+	background-size: 54%;
+	position: relative;
+}
+.home-info-img{
+	width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background-color: #fc8258;
+    border-radius: 50%;
+    position: absolute;
+    left: .3rem;
+    top: .58rem;
+    text-align: center;
+
+}
+.home-info-img>img{
+	width: 1.04rem;
+	height: 1.04rem;
+	border-radius: 50%;
+	position: relative;
+    top: 35%;
+    margin-top: -.52rem;
+
+}
+.home-info-text{
+	height: auto;
+	font-size: .26rem;
+	color: #ffffff;
+	position: absolute;
+	left: 1.85rem;
+    top: .48rem;
+}
+.self-p{
+	margin-top: .11rem;
+	font-size: .24rem;
+}
+.self-p>i{
+	display: inline-block;
+	width: .35rem;
+	height: .38rem;
+	background: url('../../images/recommendorder/ic_head.png') no-repeat;
+	background-size: 75%;
+    background-position: 0 bottom;
+}
+.local-p{
+	margin-top: .11rem;
+    font-size: .24rem;
+}
+.local-p>i{
+	display: inline-block;
+	width: .33rem;
+	height: .38rem;
+	background: url('../../images/recommendorder/ic_location.png') no-repeat center;
+	background-size: 60%;
+    background-position: .05rem bottom;
+}
+/*中间信息部分*/
+.home-con-mid{
+	width: 100%;
+    height: auto;
+    margin-top: 3.25rem;
+}
+.home-store{
+	width: 100%;
+	height: auto;
+	margin-top: 3rem;
+	background-color: #ffffff;
+}
+.home-store-info{
+	width: 100%;
+	height: .75rem;
+	line-height: .75rem;
+	position: relative;
+}
+.home-store-info>div{
+	display: inline-block;
+	width: .08rem;
+	height: .65rem;
+	background-color: #ff4a0c;
+	left: 0;
+	position: absolute;
+	top: 50%;
+    margin-top: -.325rem;
+}
+.home-store-info>a{
+	display: inline-block;
+	height: .75rem;
+	position: absolute;
+	left: .2rem;
+	font-size: .24rem;
+	color: #333333; 
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-store-info>a>i{
+	display: inline-block;
+	width: .19rem;
+	height: .21rem;
+	vertical-align: middle;
+	background: url('../../images/recommendorder/ic_next.png') no-repeat;
+    background-size: 64%;
+    margin-left: .1rem;
+}
+.home-store-info>span{
+	display: inline-block;
+	position: absolute;
+	font-size: .22rem;
+	color: #666666;
+	right: .21rem;
+}
+.home-store-hr{
+	width: 95%;
+	height: 1px;
+	background-color: #dbdbdb;
+	margin: 0 auto;
+}
+.home-store-text{
+	width: 100%;
+	height: auto;
+	table-layout: fixed;
+	margin-top: .28rem;
+	padding-bottom: .28rem;
+
+}
+.home-store-text tr{
+	height: .54rem;
+	
+	
+}
+.home-store-text tr td{
+	font-size: .24rem;
+	color: #ff4a0c;
+
+}
+.home-store-text tr td:not(.home-store-dd){
+	padding-right: .46rem;
+    text-align: right;
+}
+.home-store-text tr .home-store-dd{
+	width: 3.38rem;
+	font-size: .24rem;
+	color: #666666;
+	padding-left: .21rem;
+	white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis;
+}
+.home-store-money{
+	width: 100%;
+	height: .7rem;
+	line-height: .7rem;
+	font-size: .24rem;
+	color: #333333;
+}
+.home-store-money>span:nth-child(1){
+	float: right;
+	margin-right: .21rem;
+}
+.home-store-money>span:nth-child(2){
+	float: right;
+	margin-right: .2rem;
+}
+.home-store-info.history{
+	background-color: #ffffff;
+	margin-top: .08rem;
+
+}
+/*底部*/
+.home-bottom>li:nth-child(1) a{
+	background: url('../../images/recommendorder/ic_indent_nor.png') no-repeat center .2rem;
+	background-size: 36%;
+}
+.home-bottom>li:nth-child(2) a{
+	background: url('../../images/recommendorder/ic_shop_nor1.png') no-repeat center .2rem;
+	background-size: 48%;
+}
+.home-bottom>li:nth-child(3) a{
+	background: url('../../images/recommendorder/ic_home_pre.png') no-repeat center .2rem;
+	background-size: 40%;
+	color: #ff4a0c;
+}
+

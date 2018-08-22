@@ -1,0 +1,158 @@
+/*选择日期*/
+.date-select {
+    display: none;
+    padding-left: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div .triangle {
+    display: none;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding-top: 45px;
+    padding-left: 40px;
+}
+
+div .triangle-down {
+    margin-left: 142px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 15px solid #d8d5d5;
+}
+
+.date > li:hover {
+    background: #fbfcfe;
+}
+
+.ui.icon.input input {
+    width: 200px;
+    padding-right: 0 !important;
+}
+
+.ui.selection.dropdown {
+    padding: 0;
+}
+
+.ui.year-selection.dropdown {
+    min-width: 3em;
+    width: 5em;
+}
+
+.ui.month-selection.dropdown {
+    min-width: 3em;
+    width: 4em;
+}
+
+.ui.day-selection.dropdown {
+    min-width: 3em;
+    width: 4em;
+}
+
+.table-module .title .store-options {
+    width: 100%;
+}
+
+.ui.small.basic.icon.buttons {
+    float: right;
+    margin-right: 20px;
+}
+
+.store-options span {
+    padding-top: 10px;
+    margin-right: 22px;
+}
+
+.results {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    width: 33%;
+}
+
+.result {
+    margin: 0;
+    padding: 15px 10px 0 10px;
+    float: left;
+}
+
+.guide {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sales span {
+    padding-left: 20px;
+}
+
+.sales b {
+    margin-right: 15px;
+    float: right;
+}
+
+.loadmore {
+    display: none;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ui.button.toggle.active {
+    background-color: rgb(70, 64, 62) !important;
+}
+
+.ui.button.toggle.active:hover {
+    background-color: #3f5243 !important;
+}
+
+.spinner {
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ff5523;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}

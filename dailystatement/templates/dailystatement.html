@@ -1,0 +1,109 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>超盟 - 工资报表</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/style_table.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    {% include "nav_sidebar.html" %}
+    <!-- 内容 -->
+    <div class="content">
+        <div class="module-wrap">
+            <div class="table-module">
+                <div class="title">
+                    <p>工资表（门店）</p>
+                    <div class="store-options">
+                        <div class="time">
+                            <input type="text" id="startTime" onclick="laydate()" value="">
+                            ~
+                            <input type="text" id="endTime" onclick="laydate()" value="">
+                        </div>
+                        <div class="search">                            
+                            <input type="text" placeholder="门店编号/门店名称"></input>
+                            <img src="{% static 'images/analytics/search.png' %}" draggable="false">
+                        </div>
+                       
+                        <div class="download">
+                            <img src="{% static 'images/analytics/icon@2x_29.png' %}" draggable="false">
+                        </div>
+                    </div>
+                </div>
+                <!-- 列表 -->
+                <div class="table-wrap">
+                    <div class="table-border">
+                        <table class="area-list">
+                            <thead class="cursor-defalut">
+                                <tr>
+                                    <th class="th-first" value="id">序号</th>
+                                    <th class="th-third" value="number">
+                                        工资号
+                                        <div class="ascending">
+                                            <div class="up"></div>
+                                            <div class="down"></div>
+                                        </div>
+                                    </th>
+                                    <th class="th-second" value="store_name">
+                                        门店
+                                        <div>
+                                            <div class="up"></div>
+                                            <div class="down"></div>
+                                        </div>
+                                    </th>
+                                    <th class="th-third" value="commission">
+                                        提成总额
+                                        <div>
+                                            <div class="up"></div>
+                                            <div class="down"></div>
+                                        </div>
+                                    </th>
+                                    <th class="th-third last-width" value="guides">
+                                        促销员
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="limit-height">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 分页 -->
+                <div class="pagination-wrap">
+                    <div class="pagination">
+                        <div class="page-num">每页10条</div>
+                        <select name="page" class="select-page">
+
+                        </select>
+                        <p>共<span>10</span>页 共<span>10</span>条</p>
+                        <div class="page-turing prev">
+                            <img src="{% static 'images/analytics/left.png' %}" alt="" draggable="false">
+                        </div>
+                        <div class="page-turing next">
+                            <img src="{% static 'images/analytics/right.png' %}" alt="" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="{% static 'js/common/utils.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/tablesort.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/filesaver.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/tableexport.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/base.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/store-commission.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/laydate/laydate.js' %}"></script>
+<script type="text/javascript">
+    laydate({
+        elem: '#startTime',
+        fixed: true
+    });
+</script>
+</html>

@@ -1,0 +1,241 @@
+body{
+  background-color: #ffffff;
+}
+.history-back {
+  display: inline-block;
+  width: .15rem;
+  height: .27rem;
+  position: absolute;
+  margin-top: -.135rem;
+  left: .21rem;
+  top: 50%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-info-nav-a1 {
+  width: .15rem;
+  height: .27rem;
+}
+.con{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.banner{
+  margin-top: 2.26rem;
+  width: 100%;
+  height: 1.4rem;
+  background: url('/static/images/recommendorder/ic_logo.png') no-repeat center;
+
+}
+form{
+  width: 100%;
+  height: auto;
+  padding-top: 1.03rem; 
+}
+.con-info{
+  width: 4.78rem;
+  height: auto;
+  margin: auto;
+}
+.ps,.tel,.tel-people,.account,.vertify-code{
+  margin: 0 auto;
+  position: relative;
+  width: 3.5rem;
+  height: .88rem;
+  border-bottom:1px solid #ffc8b6;
+  font-size: .18rem;
+  color: #333333;
+}
+.store-name{
+  margin: 0 auto;
+  position: relative;
+  width: 3.5rem;
+  height: .88rem;
+  font-size: .18rem;
+  color: #333333;
+}
+.ps-label,.tel-label,.tel-people-label,.account-label,.vertify-code-label{
+  position: absolute;
+  left: 0;
+  bottom: .17rem;
+  font-size: .24rem;
+  color: #333333;
+}
+.store-name-label{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: .17rem;
+  font-family: PingFangSC Regular;
+  font-size: .22rem;
+  color: #666666;
+}
+.tel-label{
+
+}
+.tel-verify{
+  display: none;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-family: PingFangSC Light bold;
+  font-size: 0.16rem;
+  color: #ff4a0c;
+}
+#ps,#store-name,#tel,#tel-people,#account,#vertify-code{
+  position: absolute;
+  display: inline-block;
+  width: 3.4rem;
+  height: .32rem;
+  border:0;
+  font-size: .24rem;
+  color: #666666;
+  left: 0.74rem;
+  bottom: .17rem;
+}
+#tel{
+  left: 1.1rem;
+}
+#vertify-code{
+  left: 1.44rem;
+}
+#tel-people{
+  left: 0.66rem;
+}
+.address{
+  position: relative;
+  width: 4.78rem;
+  height: 1.07rem;
+  border-bottom:1px solid #f2f2f2;
+  font-size: .24rem;
+  color: #333333;
+}
+.address-label{
+  position: absolute;
+  left: .46rem;
+  top: .31rem;
+  font-size: .24rem;
+  color: #333333;
+}
+#address{
+  position: absolute;
+  display: inline-block;
+  width: 3.4rem;
+  height: .63rem;
+  border:.0;
+  outline:none;
+  font-size: .24rem;
+  color: #666666;
+  left: 1.2rem;
+  bottom: .09rem;
+  resize: none;
+}
+.submit-button:active{
+  opacity: 0.6;
+}
+.submit-button{
+  width: 3.45rem;
+  height: .65rem;
+  background-color: #ff4a0c;
+  text-align: center;
+  line-height: .65rem;
+  color: #ffffff;
+  font-size: .24rem;
+  border-radius: .08rem;
+  margin: .45rem auto;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.verify-code{
+    position: relative;
+    width: 100%;
+    height: .65rem;
+    background-color: #dbdbdb;
+    margin-top: .55rem;
+    border-radius: .08rem;
+}
+.verify-code-input{
+    display: inline-block;
+    width: 2.13rem;
+    height: .65rem;
+    margin-left: .25rem;
+    color: #333333;
+    border:none;
+    background-color: #dbdbdb;
+}
+.btn-security-code{
+    -webkit-appearance: none;
+    display: inline-block;
+    position: absolute;
+    border: 0;
+    outline: 0;
+    border-radius: 0.08rem;
+    right: 0;
+    top: 50%;
+    margin-top: -.27rem;
+    width: 1.32rem;
+    height: .55rem;
+    line-height: .55rem;
+    color: #ffffff;
+    font-size: .18rem;
+    text-align: center;
+    background-color: #ffbc0c;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*input::-webkit-input-placeholder{
+    color: #ffffff
+}*/
+.tel-model{
+    width: 6.4rem;
+    height: 11.36rem;
+    background: rgba(0,0,0,0.45);
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 90909;
+}
+.tel-model>div{
+    width: 4.1rem;
+    height: 2.2rem;
+    background: white;
+    z-index: 9999999999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    margin: auto;
+    border-radius: 0.08rem;
+}
+.is-tel{
+    display: block;
+    width: 100%;
+    font-size: 0.24rem;
+    height: 1.38rem;
+    color: #333;
+    line-height: 1.38rem;
+    text-align: center;
+}
+.sure:active{
+    opacity: 0.6;
+}
+.sure{
+    width: 100%;
+    height: .86rem;
+    line-height: .86rem;
+    text-align: center;
+    border-top: 1px solid #dbdbdb;
+    font-size: .24rem;
+    color: #ec6037;
+    position: absolute;
+    bottom: 0;
+}
+.init-password{
+  position: relative;
+  border: 0;
+  margin-left: .45rem;
+  margin-top: .2rem;
+  color: #999999;
+}

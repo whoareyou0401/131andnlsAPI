@@ -1,0 +1,112 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数据导入</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/nav_sidebar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/style_table.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dailystatement/data.css' %}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<!-- 导航栏 -->
+{% include "nav_sidebar.html" %}
+
+<div id="app">
+    <el-container>
+        <el-header></el-header>
+    </el-container>
+    <el-container>
+        <el-main>
+            <el-row :gutter="20" style="background: white; padding: 20px;">
+                <el-col :span="24" style="font-size:18px ">
+                    模版下载
+                </el-col>
+                <el-col :span="8">
+                    <div style="padding: 20px"><el-button round><a href="https://motse-1253578860.cos.ap-beijing.myqcloud.com/nls/%E5%AF%BC%E8%B4%AD%E4%BF%A1%E6%81%AF%E8%A1%A8.csv">导购信息表模版下载</a></el-button></div>
+                    <div style="padding: 20px"><el-button round><a href="https://motse-1253578860.cos.ap-beijing.myqcloud.com/nls/%E9%97%A8%E5%BA%97%E4%BF%A1%E6%81%AF%E8%A1%A8.csv">门店信息表模版下载</a></el-button></div>
+                    <div style="padding: 20px"><el-button round><a href="https://motse-1253578860.cos.ap-beijing.myqcloud.com/nls/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E8%A1%A8.csv">商品信息表模版下载</a></el-button></div>
+                </el-col>
+            </el-row>
+            <el-row :gutter="20" style="background: white; padding: 20px;margin-top: 20px">
+                <el-col :span="24" style="font-size:18px ">
+                    数据导入
+                </el-col>
+                <el-col :span="8">
+                    <el-upload
+                            class="upload-demo"
+                            drag
+                            action="https://liuda.sharemsg.cn/api/v1.0/dailystatement/excel"
+                            :headers="uploadHeaders"
+                            :data="guideData"
+                            :limit="limit"
+                            accept=".xlsx,.csv">
+                        <i class="el-icon-upload"></i>
+                        <div class="el-upload__text">将导购信息表拖到此处，或<em>点击上传</em></div>
+                        <div class="el-upload__tip" slot="tip">只能上传xlsx文件</div>
+                    </el-upload>
+                </el-col>
+                <el-col :span="8">
+                    <el-upload
+                            class="upload-demo"
+                            drag
+                            action="https://liuda.sharemsg.cn/api/v1.0/dailystatement/excel"
+                            :headers="uploadHeaders"
+                            :data="storeData"
+                            :limit="limit"
+                            accept=".csv">
+                        <i class="el-icon-upload"></i>
+                        <div class="el-upload__text">将门店信息表拖到此处，或<em>点击上传</em></div>
+                        <div class="el-upload__tip" slot="tip">只能上传csv文件</div>
+                    </el-upload>
+                </el-col>
+                <el-col :span="8">
+                    <el-upload
+                            class="upload-demo"
+                            drag
+                            action="https://liuda.sharemsg.cn/api/v1.0/dailystatement/excel"
+                            :headers="uploadHeaders"
+                            :data="goodsData"
+                            :limit="limit"
+                            accept=".csv">
+                        <i class="el-icon-upload"></i>
+                        <div class="el-upload__text">将商品信息表拖到此处，或<em>点击上传</em></div>
+                        <div class="el-upload__tip" slot="tip">只能上传csv文件</div>
+                    </el-upload>
+                </el-col>
+            </el-row>
+        </el-main>
+    </el-container>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/javascript" src="{% static 'js/dailystatement/base.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/common/utils.js' %}"></script>
+
+<script>
+    var csrftoken = getCookie('csrftoken');
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                uploadHeaders: { "X-CSRFToken" : csrftoken },
+                guideData: {"template_type" : "guide"},
+                storeData:{"template_type" : "store"},
+                goodsData: {"template_type" : "item"},
+                limit: 1
+            }
+        }
+    })
+
+
+</script>
+</html>

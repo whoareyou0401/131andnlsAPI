@@ -1,0 +1,221 @@
+/* 内容 */
+.basic-indexes-module {
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border: 1px solid #d0d5de;
+}
+.basic-indexes-module .basic-indexes-total {
+    padding: 0 28px 19px;
+    border-bottom: 1px solid #d0d5de;
+}
+.basic-indexes-module .basic-indexes-total .total-title{
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #d0d5de;
+    height: 53px;
+}
+.basic-indexes-module .basic-indexes-total .total-title>p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    font-size: 18px;
+    color: #2a2a2a;
+}
+.basic-indexes-module  .basic-indexes-total>p {
+    padding-bottom: 18px;
+    font-size: 18px;
+    border-bottom: 1px solid #d0d5de;
+}
+.basic-indexes-module .basic-indexes-total .store-options {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+}
+.basic-indexes-module .basic-indexes-total .store-options .date{
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #d0d5de;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #9ba3b1;
+}
+.basic-indexes-module .basic-indexes-total .store-options .date>li {
+    float: left;
+    padding: 7.5px 14px;
+    border-right: 1px solid #d0d5de;
+    cursor: pointer;
+}
+.basic-indexes-module .basic-indexes-total .store-options .date>li:last-of-type {
+    border-right: 0;
+}
+.basic-indexes-module .basic-indexes-total .total-items{
+    overflow: hidden;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li {
+    float: left;
+    margin-top: 19px;
+    padding: 5px 0 0 36px;
+    text-align: left;
+    width: 21.76%;
+    border-right: 1px solid #d0d5de;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li:first-child {
+    padding: 5px 0 5px 8px;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li:last-of-type {
+    border: 0;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li>img {
+    width: 38px;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li .indexes-item {
+    margin-left: 22px;
+    display: inline-block;
+    font-size: 22px;
+    color: #212121;
+}
+.basic-indexes-module .basic-indexes-total .total-items>li .indexes-item>p:first-child {
+    font-size: 16px;
+    color: #747d8d;
+}
+.basic-indexes-module .basic-indexes-total .total-items .basic-list {
+    float: right;
+    font-size: 12px;
+    color: #9ba3b1;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+.basic-indexes-module .basic-indexes-total .total-items .basic-list>div>p {
+    display: inline-block;
+    margin-left: 8px;
+}
+.basic-indexes-module .data-visualization .options-tab {
+    padding: 6px 0 0 22px;
+    overflow: hidden;
+    background: #f6f8fb;
+    font-size: 14px;
+    color: #747d8d;
+    text-align: center;
+}
+.basic-indexes-module .data-visualization .options-tab>li {
+    float: left;
+    padding: 5px 35px 13px;
+    cursor: pointer;
+    border-top: 4px solid #f6f8fb;
+    width: 14%;
+}
+.basic-indexes-module .data-visualization .options-tab span:nth-of-type(2),
+.basic-indexes-module .data-visualization .options-tab span:nth-of-type(3) {
+    font-weight: bold;
+}
+.basic-indexes-module .data-visualization {
+    overflow: hidden;
+}
+
+.content .menu .hierarchy{
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translate(0,-50%);
+}
+.content .menu .hierarchy>a{
+    font-size: 18px;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+.content .menu .hierarchy>img{
+    width: 23px;
+    vertical-align: sub;
+}
+
+/* 折线图 */
+.data-visualization .line-chart {
+    margin-top: 24px;
+    padding: 10px;
+}
+.data-visualization .line-chart .curve{
+    width: 100%;
+    height: 274px;
+}
+.data-visualization .line-chart .curve{
+    width: 100%;
+    height: 274px;
+}
+
+/* 圆形图 */
+.circle-graph-module {
+    float: left;
+    margin-right: 19px;
+    width: 49%;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #d0d5de;
+}
+.total {
+    padding: 9px 14px 10px 22px;
+    border-bottom: 1px solid #d0d5de;
+}
+.total .total-title{
+    position: relative;
+    overflow: hidden;
+}
+.total .total-title>p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    font-size: 18px;
+    color: #2a2a2a;
+}
+.total .store-options {
+    float: right;
+}
+.table-module .title-margin {
+    margin: 0;
+}
+.table-module .title-margin>p {
+    left: 22px;
+}
+.table-module .title-margin .store-options {
+    right: 22px;
+}
+.table-module .data-visualization {
+    background: #f6f8fb;
+}
+.data-visualization .options-tab {
+    padding: 6px 28px 0 20px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #697282;
+    background: #f6f8fb;
+}
+.data-visualization .options-tab>li {
+    float: right;
+    padding: 4px 20px 13px;
+    cursor: pointer;
+    border-top: 4px solid #f6f8fb;
+}
+.data-visualization .chart-wrap {
+    width: 100%;
+    height: 320px;
+}
+.data-visualization .chart-wrap .curve{
+    width: 100%;
+    height: 320px;
+}
+
+/* 条形图 */
+.bar-chart-module {
+    float: right;
+    width: 49%;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #d0d5de
+}
+
+.table-options-tab {
+    font-size: 12px;
+    color: #747d8d;
+}

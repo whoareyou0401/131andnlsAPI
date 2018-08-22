@@ -1,0 +1,46 @@
+.category {
+    position: absolute;
+    top: 50%;
+    right: 86px;
+    transform: translate(0,-50%);
+}
+.refresh {
+    cursor: pointer;
+}
+.refresh img,
+.refresh>span{
+    vertical-align: middle;
+}
+.refresh>span {
+    display: inline-block;
+}
+.items-list {
+    padding: 35px 22px;
+    overflow: hidden;
+}
+.items-list .item-wrap {
+    position: relative;
+    float: left;
+    margin: 0 50px 42px 0;
+    width: 136px;
+}
+.items-list .item-wrap>a {
+    display: inline-block;
+}
+.items-list .item-wrap a:first-child img {
+    width: 100%;
+}
+.items-list .item-wrap>img {
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+    cursor: pointer;
+}
+.items-list .item-wrap p {
+    font-size: 12px;
+    color: #2a2a2a;
+}
+.items-list .item-wrap>p {
+    font-size: 16px;
+    color: #ff5422;
+}

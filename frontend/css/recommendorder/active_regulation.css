@@ -1,0 +1,124 @@
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.home-info-top {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    background-color: #ff4a0c;
+    z-index: 999;
+}
+.act_back{
+    display: inline-block;
+    width: .15rem;
+    height: .27rem;
+    position: absolute;
+    margin-top: -.135rem;
+    left: .21rem;
+    top: 50%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.home-info-nav-a1{
+    width: .15rem;
+    height: .27rem;
+}
+.mid_con{
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    margin-top: .88rem;
+}
+.banner_top{
+    width: 100%;
+    height: 3.42rem;
+    background: url('/static/images/recommendorder/banner_big.png') no-repeat;
+    background-size: 100%;
+}
+.banner_bottom{
+    width: 100%;
+    height: 1.24rem;
+    background: url('/static/images/recommendorder/dibu.png') no-repeat;
+    background-size: 100%;
+}
+.title_mid{
+    width: 100%;
+    height: 8.88rem;
+    background-color: #fffbe4;
+}
+.banner_mid{
+    width: 100%;
+    height: 8.88rem;
+    background: url('/static/images/recommendorder/bg_round.png') no-repeat;
+    background-size: 100%;
+}
+.act_data{
+    width: 80%;
+    height: 1.7rem;
+    margin: 0 auto;
+    border-bottom:1px dashed #723403;
+    text-align: center;
+}
+.act_data>img{
+    width: 1.7rem;
+    height: .4rem;
+    margin-top: .35rem;
+}
+.act_data>p{
+    color: #723403;
+    font-size: .24rem;
+    margin-top: .2rem;
+}
+.act_con{
+    width: 80%;
+    height: 2.8rem;
+    margin: 0 auto;
+    border-bottom:1px dashed #723403;
+    text-align: center;
+}
+.act_con>img{
+    width: 1.7rem;
+    height: .4rem;
+    margin-top: .35rem;
+}
+.act_con>p{
+    color: #723403;
+    font-size: .24rem;
+    margin-top: .2rem;
+}
+.act_ps{
+    width: 80%;
+    height: 3.36rem;
+    margin: 0 auto;
+    border-bottom:1px dashed #723403;
+    text-align: center;
+}
+.act_ps>img{
+    width: 2.5rem;
+    height: .4rem;
+    margin-top: .35rem;
+}
+.act_ps>p{
+    color: #723403;
+    font-size: .24rem;
+    margin-top: .25rem;
+}
+.act_tel{
+    width: 80%;
+    height: .93rem;
+    margin: 0 auto;    
+}
+.act_tel>p{
+    width: 100%;
+    height: .93rem;
+    line-height: .93rem;
+    color: #723403;
+    font-size: .24rem;
+    text-align: center;
+}
+.act_tel>p>a{
+    color: #317dfb;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

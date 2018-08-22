@@ -1,0 +1,13 @@
+.hint{
+    z-index: 99999;
+    left: 0;
+    top:0;
+    width: 8rem;
+    height: 10rem;
+    background-color: white;
+    position: absolute;
+    text-align:center;
+    /*overflow-x:hidden;
+    overflow-y:auto;*/
+    overflow:scroll;
+}

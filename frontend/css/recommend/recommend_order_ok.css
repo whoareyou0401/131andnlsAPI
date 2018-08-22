@@ -1,0 +1,46 @@
+*{
+	margin:0;
+	padding:0;
+}
+.home-info-nav-a1{
+	width: .15rem;
+	height: .27rem;
+}
+.order_ok_back{
+	display: inline-block;
+	width: .15rem;
+	height: .27rem;
+	position: absolute;
+    margin-top: -.135rem;
+    left: .21rem;
+    top: 18%;
+
+}
+.home-con-mid.history-a{
+    width: 100%;
+    height: auto;
+    margin-top: 1.15rem;
+}
+.home-store.history-b {
+    width: 100%;
+    height: auto;
+    margin-top: .08rem;
+    background-color: #ffffff;
+}
+.affirm_info{
+	width: 100%;
+	height: 2.06rem;
+	background-color: #ffffff;
+	
+}
+.affirm_info_bg{
+	width: 100%;
+	height: 2.06rem;
+	background: url('../../images/recommendorder/assistor1.png') no-repeat center 32%;
+}
+.affirm_info_bg>p{
+	color: #333333;
+	font-size: .26rem;
+	text-align: center;
+    padding-top: 1.52rem;
+}
